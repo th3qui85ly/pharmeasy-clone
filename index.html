@@ -2,28 +2,154 @@
 <html>
 <head>
     <title>Pharmeasy | Clone</title>
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/offersJustForYou.css" />
 </head>
 
-<body>
-    <!-- <div id="container">
-        <h2 class="head">Sample Heading</h2>
-    </div> -->
-    <div class="navbar">
-        <a href="./pages/ordermed.html">Order Medicines</a>
+<body>    
+<h1>Offers Just For You</h1>
+    <!-- Offers Just For you -->
+    <div id=offers-just>
+        <div class="div-one"><img src="./Images/Offers For You/Offers Just For You.svg" alt="Offers For you"/>
+            Offers Just For You
+
+            <span class="navigator">
+                <a href="">See All offers</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button"><img src="./Images/Offers For You/Arrows/left arrow.png" alt=""></button>
+                &nbsp;&nbsp;&nbsp;
+                <button class="button"><img src="./Images/Offers For You/Arrows/right-arrow.png" alt=""></button>
+            </span>
+        <div>
+            <div id="carousal-div">
+
+            </div>
+
+
     </div>
 
+    <!-- End of Offers Just for You -->
 
-    <div class="cards">
-        <div class="card">
-        </div>
-        <div class="card">
+    <script>
+        let offers_data = [
+            {
+                "icon" : "./Images/Offers For You/Birthday Week.jpg",
+                "title" : "Flat 25% off + up to Rs.7000 surprise cashback",
+                "code"  : "BDAYBASH"
+            },
+            {
+                "icon" : "./Images/Offers For You/PharmEasy.png",
+                "title" : "FLAT 18% Off on all medicine orders.",
+                "code"  : "Not Required"
+            },
+            {
+                "icon" : "./Images/Offers For You/FIrststory.jpg",
+                "title" : "Get Flat 25% Off on first medicine order + Flat 32% off on Products of Firstcry",
+                "code"  : "FIRST25"
+            },
+            {
+                "icon" : "./Images/Offers For You/Instamart.jpg",
+                "title" : "Get Flat 25% Off on first medicine order + Flat Rs.70 Off on Swiggy Instamart",
+                "code"  : "SWIGGY25"
+            },
+            {
+                "icon" : "./Images/Offers For You/Sarva.jpg",
+                "title" : "Get 3-months complimentary membership to the SARVA app",
+                "code"  : "SARVA"
+            },
+            {
+                "icon" : "./Images/Offers For You/Myglamm.jpg",
+                "title" : "Flat 25% off on first medicine order (MOV-999) + Get 50% discount on the entire range of products of MyGlamm",
+                "code"  : "MG25"
+            },
+            {
+                "icon" : "./Images/Offers For You/Lenskart.png",
+                "title" : "Get Flat 25% Off on first medicine order+ Free Lenskart Gold membership for 6 months",
+                "code"  : "LKART25"
+            },
+            {
+                "icon" : "./Images/Offers For You/Go Mechanic.jpg",
+                "title" : "Flat 25% off on medicine + Get Flat Rs.750 Off on all Periodic Services on GoMechanic App",
+                "code"  : "GM25"
+            },
+            {
+                "icon" : "./Images/Offers For You/Cult Fit.png",
+                "title" : "Get Flat 25% Off on first medicine order + 7 Days access to cult fitness centers & gyms across India",
+                "code"  : "CFIT25"
+            },
+            {
+                "icon" : "./Images/Offers For You/PharmEasy.png",
+                "title" : "Get FLAT Rs.400 cashback on PharmEasy Labtests booked above Rs.949",
+                "code"  : "EASY400"
+            },
+            {
+                "icon" : "./Images/Offers For You/10% Off.jpg",
+                "title" : "Get extra 10% Off on Everherb, Liveasy and PharmEasy products",
+                "code"  : "ELP10"
+            },
+            {
+                "icon" : "./Images/Offers For You/Paytm Cashback Off.png",
+                "title" : "Get 4000 Paytm Cashback Points via Paytm wallet | Postpaid",
+                "code"  : "Not Required"
+            },
+            {
+                "icon" : "./Images/Offers For You/Sidhayu.png",
+                "title" : "Extra 5% off on Siddhayu",
+                "code"  : "SID5"
+            },
+            {
+                "icon" : "./Images/Offers For You/Phonepay.png",
+                "title" : "Get up to Rs.750 cashback via PhonePe wallet only.",
+                "code"  : "Not Required"
+            },
+            {
+                "icon" : "./Images/Offers For You/Free Style Livre.jpg",
+                "title" : "Get 20% off on Freestyle Libre Sensors",
+                "code"  : "FSL20"
+            },
+            {
+                "icon" : "./Images/Offers For You/Savion.jfif",
+                "title" : "Additional 10% off on Savlon",
+                "code"  : "SAVL10"
+            },
+            {
+                "icon" : "./Images/Offers For You/Baidynath.jpg",
+                "title" : "Get 3 months of PharmEasy Plus membership on your order of Baidyanath products.",
+                "code"  : "BNPLUS"
+            },
+            {
+                "icon" : "./Images/Offers For You/Everyuth.jpg",
+                "title" : "Extra 10% off on Everyuth",
+                "code"  : "EYUTH10"
+            }
+            
+        ];
 
-        </div>
-        <div class="card">
 
-        </div>
-    </div>
+        offersForYou(offers_data);
+        function offersForYou(data){
+                let carousal_div = document.getElementById("carousal-div");
+                data.forEach((offer)=>{
 
+                    let offer_card = document.createElement("div");
+                    offer_card.setAttribute("class","offer-card");
+
+                    let logo = document.createElement("img");
+                    logo.src = offer.icon;
+
+                    let info = document.createElement("div");
+                    info.setAttribute("class","info");
+                    let title = document.createElement("div");
+                    title.textContent = offer.title;
+                    let code = document.createElement("div");
+                    code.textContent = "Code: "+offer.code;
+                    info.append(title,code);
+                    offer_card.append(logo,info);
+                    carousal_div.append(offer_card);
+                });
+        }
+        
+
+
+    
+    </script>
 </body>
 </html>

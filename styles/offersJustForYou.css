@@ -1,0 +1,70 @@
+#offers-just{
+    width: 70%;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+/* Div One Title and navigation */
+
+.div-one{
+    /* display: flex; */
+    font-size: 25px;
+    font-weight: bold;
+    /* background-color: yellow; */
+    vertical-align: middle;
+    /* width: 20%; */
+    /* object-fit: cover; */
+}
+
+.navigator{
+    margin-left: 60%;
+    vertical-align: middle;
+}
+.navigator a{
+    color: rgb(16,133,127);
+    text-decoration: none;
+}
+
+img{
+    width: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+    /* font-size: 25px;     */
+}
+.navigator .button{
+    vertical-align: middle;
+    background-color:transparent;
+    /* width: 25px; */
+    border: none;
+    cursor: pointer;
+}
+.navigator .button :hover{
+    background-color: whitesmoke;
+    /* padding: 20px; */
+}
+.navigator .button img{
+    width: 15px;
+    padding: 10px;
+}
+
+#carousal-div{
+    display: flex;
+    height: 270px;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+#carousal-div .offer-card{
+    display: flex;
+    width: 1000px;
+    margin: 10px;
+    height: 200px;
+    border: 1px solid black;
+}
+.offer-card img{
+    width: 100px;
+    height: 100px;
+}
