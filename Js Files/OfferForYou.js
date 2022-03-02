@@ -98,7 +98,9 @@
                 function offersForYou(data) {
                     let carousal_div = document.getElementById("carousal-div");
                     data.forEach((offer) => {
-
+                        let a = document.createElement("a");
+                        a.setAttribute("class","order-link");
+                        a.href ="https://www.google.com";
                         let offer_card = document.createElement("div");
                         offer_card.setAttribute("class", "offer-card");
                         // offer_card.setAttribute("class","item");
@@ -120,11 +122,16 @@
                             console.log("Not Required");
                             c.setAttribute("class", "code_inactive");
                         }
+                        else
+                        {
+                        c.setAttribute("class","span");
+                        }
                         c.textContent = offer.code;
                         code.append(c);
                         info.append(title, code);
                         offer_card.append(logo_div, info);
-                        carousal_div.append(offer_card);
+                        a.append(offer_card);
+                        carousal_div.append(a);
                     });
                 }
 
@@ -145,14 +152,14 @@
                     }
                     if (rightCount >= 14) {
                         console.log("if :", rightCount);
-                        slider.scrollLeft -= 247;
+                        slider.scrollLeft -= 260;
                         rightCount = rightCount - 1;
                         document.getElementById("slider-right").disabled = false;
                         document.getElementById("slider-right").setAttribute("class", 'button');
 
                     }
                     else {
-                        slider.scrollLeft -= 312;
+                        slider.scrollLeft -= 352;
                         rightCount = rightCount - 1;
                         // document.getElementById("slider-right").disabled = false;
                         document.getElementById("slider-right").removeAttribute("inactive-button");
@@ -174,13 +181,9 @@
 
                     }
 
-                    slider.scrollLeft += 312;
-
-
-
-                    slider.style.transitionDelay = "500";
-                    document.getElementById("slider-right").style.transitionDuration = "1000ms";
-                });
+                    slider.scrollLeft += 352;
+                             
+                 });
 
                 let maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
