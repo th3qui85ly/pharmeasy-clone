@@ -3,6 +3,12 @@
 <head>
     <title>Pharmeasy | Clone</title>
     <link rel="stylesheet" href="./styles/offersJustForYou.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>    
@@ -10,16 +16,16 @@
     <!-- Offers Just For you -->
     <div id=offers-just>
         <div class="div-one"><img src="./Images/Offers For You/Offers Just For You.svg" alt="Offers For you"/>
-            Offers Just For You
+            <span style="font-weight: bold;">Offers Just For You</span>
 
             <span class="navigator">
                 <a href="">See All offers</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="button"><img src="./Images/Offers For You/Arrows/left arrow.png" alt=""></button>
+                <span class="button" id="slider-left">&#129136;</span>
                 &nbsp;&nbsp;&nbsp;
-                <button class="button"><img src="./Images/Offers For You/Arrows/right-arrow.png" alt=""></button>
+                <span class="button" id="slider-right">&#129138;</span>
             </span>
         <div>
-            <div id="carousal-div">
+            <div id="carousal-div" class="owl-carousel owl-theme">
 
             </div>
 
@@ -27,8 +33,33 @@
     </div>
 
     <!-- End of Offers Just for You -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
+
         let offers_data = [
             {
                 "icon" : "./Images/Offers For You/Birthday Week.jpg",
@@ -81,7 +112,7 @@
                 "code"  : "EASY400"
             },
             {
-                "icon" : "./Images/Offers For You/10% Off.jpg",
+                "icon" : "./Images/Offers For You/tenOff.jpg",
                 "title" : "Get extra 10% Off on Everherb, Liveasy and PharmEasy products",
                 "code"  : "ELP10"
             },
@@ -111,7 +142,7 @@
                 "code"  : "SAVL10"
             },
             {
-                "icon" : "./Images/Offers For You/Baidynath.jpg",
+                "icon" : "./Images/Offers For You/Baidhynath.jpg",
                 "title" : "Get 3 months of PharmEasy Plus membership on your order of Baidyanath products.",
                 "code"  : "BNPLUS"
             },
@@ -131,23 +162,118 @@
 
                     let offer_card = document.createElement("div");
                     offer_card.setAttribute("class","offer-card");
-
+                    // offer_card.setAttribute("class","item");
+                    let logo_div = document.createElement("div");
+                    logo_div.setAttribute("class","logo-div");
                     let logo = document.createElement("img");
                     logo.src = offer.icon;
-
+                    logo_div.append(logo);
                     let info = document.createElement("div");
                     info.setAttribute("class","info");
                     let title = document.createElement("div");
+                    title.setAttribute("class","title");
                     title.textContent = offer.title;
                     let code = document.createElement("div");
-                    code.textContent = "Code: "+offer.code;
+                    code.setAttribute("class","code");
+                    code.textContent = "Code: ";
+                    let c = document.createElement("span");
+                    if(offer.code == "Not Required")
+                    {
+                        console.log("Not Required");
+                        c.setAttribute("class","code_inactive");
+                    }
+                    c.textContent = offer.code;
+                    code.append(c);
                     info.append(title,code);
-                    offer_card.append(logo,info);
+                    offer_card.append(logo_div,info);
                     carousal_div.append(offer_card);
                 });
         }
         
 
+        let slider = document.getElementById("carousal-div");
+
+        let ButtonLeft = document.getElementById("slider-left");
+        let ButtonRight = document.getElementById("slider-right");
+        let leftCount = 0;
+        let rightCount = 0;
+
+        ButtonLeft.setAttribute("class","inactive-button");
+        ButtonLeft.addEventListener("click",()=>{
+            
+            leftCount--;
+            if(leftCount <= 0)
+            {
+                ButtonLeft.setAttribute("class","inactive-button");
+            }
+            if(rightCount >= 14)
+            {
+                console.log("if :",rightCount);
+                slider.scrollLeft -= 247;
+                rightCount = rightCount - 1;
+                document.getElementById("slider-right").disabled = false;
+                document.getElementById("slider-right").setAttribute("class",'button');
+
+            }
+            else
+            {
+            slider.scrollLeft -= 312;
+            rightCount = rightCount -1;
+            // document.getElementById("slider-right").disabled = false;
+            document.getElementById("slider-right").removeAttribute("inactive-button");
+                // slider.style.transitionDelay = "500";
+        }
+        });
+        ButtonRight.addEventListener("click",()=>{
+            rightCount++;
+            leftCount++;
+           console.log(rightCount);
+
+            if(rightCount >= 1)
+            {
+                ButtonLeft.setAttribute("class","button");
+            }
+
+           if(rightCount>=14)
+           {
+            document.getElementById("slider-right").disabled = true;
+            ButtonRight.setAttribute("class","inactive-button");
+
+           }
+           
+                slider.scrollLeft += 312;
+                
+          
+           
+            slider.style.transitionDelay = "500";
+            document.getElementById("slider-right").style.transitionDuration = "1000ms";
+        });
+
+        let maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        function autoPlay(){
+            if(slider.scrollLeft > (maxScrollLeft - 1)){
+                slider.scrollLeft -= maxScrollLeft;
+                // slider.style.transitionDelay="500";
+            }
+            else{
+                slider.scrollLeft += 1;
+            }
+        }
+
+        // let play = setInterval(autoPlay,50);
+
+        // let offer_card = document.getElementsByClassName("offer-card");
+        // console.log(offer_card);
+        // for(let i = 0; i < offer_card.length; i++)
+        // {
+        //     offer_card[i].addEventListener("mouseover",()=>{
+        //         clearInterval(play);
+        //     })
+        //     offer_card[i].addEventListener("mouseout",()=>{
+        //         return play = setInterval(autoPlay,50);
+        //     })
+        // }
 
     
     </script>
