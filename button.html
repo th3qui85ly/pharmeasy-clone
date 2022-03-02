@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./styles/button.css">
 </head>
 <body>
-    <div id="container" >
-        <div id="main" role = "button" onclick="open()">
+    <div id="container" role = "button" >
+        <div id="main" >
             <div id="first">
                 <img id="first_div_image" src="https://assets.pharmeasy.in/web-assets/dist/e3db129c.png"
                         alt="plus">
@@ -22,3 +22,10 @@
     </div>
 </body>
 </html>
+<script>
+    let btn = document.getElementById("container");
+    btn.addEventListener("click" , awake)
+    function awake(){
+        console.log("This is a Pharmeasy Plus Page");
+    }
+</script>
