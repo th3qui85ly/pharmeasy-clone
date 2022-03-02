@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Page</title>
+    <link rel="stylesheet" href="./styles/button.css">
+</head>
+<body>
+    <div id="container" role = "button" >
+        <div id="main" >
+            <div id="first">
+                <img id="first_div_image" src="https://assets.pharmeasy.in/web-assets/dist/e3db129c.png"
+                        alt="plus">
+            </div>
+            <div id="middle">Save flat <strong>5%</strong> extra on medicines &amp; enjoy <strong>FREE</strong>
+                delivery with PLUS <br> membership</div>
+            <div id="third"><img id="third_div_image" src="https://assets.pharmeasy.in/web-assets/dist/b20b0932.png"
+                alt="loyalty"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let btn = document.getElementById("container");
+    btn.addEventListener("click" , awake)
+    function awake(){
+        console.log("This is a Pharmeasy Plus Page");
+    }
+</script>
