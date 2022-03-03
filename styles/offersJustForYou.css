@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+body{    
+font-family: 'Open Sans', sans-serif;
+}
+
+
+.heading{
+    font-size: 20px;
+    color: rgb(79, 88, 94);
+    line-height: 50px;
+    font-weight: 700;
+    display: flex;
+    /* border: 1px solid; */
+    width: fit-content;
+    vertical-align: middle;
+    vertical-align: baseline;
+    /* padding-top: 8px; */
+    margin-left: 0;
+}
+
 #offers-just{
     width: 80%;
     height: 200px;
@@ -8,39 +28,62 @@
     user-select: none;
 }
 
+
+
 /* Div One Title and navigation */
 
 .div-one{
-    /* display: flex; */
+    display: flex;
     font-size: 25px;
     /* font-weight: bold; */
-    /* background-color: yellow; */
+    /* background-color: yellow;    */
     vertical-align: middle;
     /* width: 20%; */
     /* object-fit: cover; */
+    justify-content: space-between;
     padding-left: 20px;
 }
 
 .navigator{
-    margin-left: 55%;
-    vertical-align: middle;
+    display: flex;
+    /* float: right; */
+    /* text-align: right;
+    align-items: right; */
+    /* margin-left: 57%; */
+    /* width: max-content; */
+    /* min-width: 400px; */
+    /* vertical-align: middle; */
     /* border: 1px solid black; */
-    margin-right: 1%;
+    line-height: 25px; 
+    /* margin-right: 1%; */
+    /* position:static; */
+    /* width: 300px; */
+    /* background-color: aqua; */
+    justify-content: space-between;
+    max-width: 40%;
+    min-width: 15%  ;
 }
 .navigator a{
-    color: rgb(16,133,127);
+    color: rgb(16, 132, 126);
     text-decoration: none;
-    font-weight:normal;
+    font-weight:600;
+    font-size: 18px;
+    width: 200px;
     /* font-weight: bold; */
-    margin-right: 2%;
-    vertical-align: middle;
+    /* margin-right: 2%;    */
+    /* vertical-align: baseline; */
+    padding-top: 8px;
+
 }
 
 img{
     width: 50px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
+    /* padding-bottom: 0; */
+    /* margin-bottom: 5px; */
+    vertical-align: middle; 
+    margin-right: 0;
+    /* border:  1px solid; */
+    /* margin: 0; */
     /* font-size: 25px;     */
 }
 .navigator .button{
@@ -51,7 +94,8 @@ img{
     font-size: 20px;
     cursor: pointer;
     padding: 7px;
-    margin-right: 2%;
+    margin-right: 5%;   
+    margin-left: 10%;
 
 }
 
@@ -68,7 +112,8 @@ img{
     font-size: 20px;
     padding: 7px;
     vertical-align: middle;
-    margin-right: 2%;
+    /* margin-right: 2%; */
+    margin-left: 10%;
 }
 .inactive-button:hover{
     /* background-color: transparent;

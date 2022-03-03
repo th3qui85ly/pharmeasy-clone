@@ -119,7 +119,7 @@
                         code.textContent = "Code: ";
                         let c = document.createElement("span");
                         if (offer.code == "Not Required") {
-                            console.log("Not Required");
+                            // console.log("Not Required");
                             c.setAttribute("class", "code_inactive");
                         }
                         else
@@ -151,7 +151,7 @@
                         ButtonLeft.setAttribute("class", "inactive-button");
                     }
                     if (rightCount >= 14) {
-                        console.log("if :", rightCount);
+                        // console.log("if :", rightCount);
                         slider.scrollLeft -= 260;
                         rightCount = rightCount - 1;
                         document.getElementById("slider-right").disabled = false;
@@ -169,7 +169,7 @@
                 ButtonRight.addEventListener("click", () => {
                     rightCount++;
                     leftCount++;
-                    console.log(rightCount);
+                    // console.log(rightCount);
 
                     if (rightCount >= 1) {
                         ButtonLeft.setAttribute("class", "button");
@@ -214,7 +214,7 @@
             let isDown = false;
             let startX;
             let scrollLeft;
-            console.log(slider);
+            // console.log(slider);
 
             slider.addEventListener("mousedown",(e)=>{
                 isDown = true;
@@ -222,7 +222,7 @@
                 // console.log(e.pageX);
                 startX = e.pageX - slider.offsetLeft;
                 scrollLeft = slider.scrollLeft;
-                console.log(startX);
+                // console.log(startX);
             
             });
 
