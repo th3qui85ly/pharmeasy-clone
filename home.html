@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  <body>
+    <header id="nav-head">
+      <div class="navbar">
+        <div class="navbar-top">
+          <div class="navbar-logo">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
+              alt="Pharmeasy logo"
+            />
+          </div>
+          <div class="navbar-search">
+            <div id="search-box">
+              <select name="city" id="city">
+                <option value="select-city">Select City</option>
+                <option value="bengaluru">Bengaluru</option>
+                <option value="delhi">Delhi NCR</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+              </select>
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Search here"
+              />
+              <div id="suggestion"></div>
+              <button>&#128269;</button>
+            </div>
+          </div>
+          <div class="navbar-side">
+            <button onclick="" id="nav-btn">
+              Don't have a prescription? <br /><span>Get started </span
+              ><i class="arrow down"></i>
+            </button>
+          </div>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-tab">
+            <div id="tab-nav">
+              <button class="tab1">Order Medicines</button>
+              <button class="tab1">Healthcare Products</button>
+              <button class="tab1">Diagonstic Tests</button>
+            </div>
+          </div>
+          <div class="navbar-button">
+            <div id="btn-nav">
+              <button class="tab2">Offers</button>
+              <button class="tab2">Login/ Signup</button>
+              <button class="tab2">Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ss-container">
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/87bb46bee08-PMEY20DWEB.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/b54f4e1b5c6-otc_sale_ends_hp_dweb.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/25b29fcaa01-DWEBSUPR20.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/9e172a2bf75-prioritydweb.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/99b110cdccb-PHEA20.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/ec027bde5da-diabetic_slipper_Dweb.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/8fe18b32048-Advanced_Full_Body_Checkup_Dweb_NEWtwo.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cms-contents.pharmeasy.in/banner/1b19d5cef0f-GoCoronaGoWeb.jpg?dim=1440x0&dpr=1&q=100"
+          class="pics"
+        />
+      </div>
+
+      <a class="prev" class="material-icons" onclick="plusSlides(-1)"
+        >&#10094;</a
+      >
+      <a class="next" class="material-icons" onclick="plusSlides(1)"
+        >&#10095;</a
+      >
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+    </div>
+
+   
+  </body>
+  <script src="main.js"></script>
+
+</html>

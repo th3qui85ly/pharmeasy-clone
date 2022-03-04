@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+body{
+    margin : 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
+}
+#main{
+    display: flex;
+    background-color: white;
+    height: 520px;
+    margin-top: 50px;
+    /* margin: 20px 70px 0xp 70px; */
+
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    width: 70%;
+    letter-spacing: 1.5%;
+    line-height: 180%;
+    /* background-color: azure; */
+}
+#right{
+    margin-left: 0%;
+    width: 30%;
+}
+#c1r2{
+    height : 50%;
+}
+#c2r1{
+    height:100%
+}
+ #c3r2{
+    height : 50%;
+}
+.heading{
+    width: 200px;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-weight: 700;
+}
+.content{
+    margin: 2%;
+    margin-left: 0;
+}
+svg{
+    color: #10847e;
+    margin-right: 3%;
+    height:33px;
+    width:auto;
+}
+.follow{
+font-size: 110%;
+}
+#payment_partners{
+    display:flex;
+    margin: 2px;
+    margin-left: 10%;
+    margin-top: 12px;
+}
+#image{
+margin-top: 0px;
+/* background-color: rgb(168, 82, 82); */
+height: 100px;
+width: 100px;
+margin-left: 10%;
+display:flex;
+}
+.extra{
+height: 50px;
+width: 50px;
+object-fit: contain;
+margin-right: 10%;
+}
+.contain{
+    object-fit: contain;
+}
+div > #mobi{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    padding-top: 3%;
+}
+#phonepe , #visa{
+    object-fit: cover;
+}
+#rupay{
+    object-fit: inherit;
+}
+#airtel{
+    height: 30px;
+    padding-top: 9%;
+}
+/* @media (min-width : ) */
