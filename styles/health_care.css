@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 body{    
 font-family: 'Open Sans', sans-serif;
+color: rgb(74, 74, 74) ;
 }
 
 .main-carousel{
@@ -86,3 +87,115 @@ font-family: 'Open Sans', sans-serif;
     padding-top: 12px;
     font-weight: 400;
 }
+
+#description{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 16.8px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 100px;
+}
+
+ul {
+    list-style: none;
+    
+  }
+  
+  ul li::before {
+    content: "\2022";
+    color: rgb(22, 135, 110);
+    font-size: 30px;
+    font-weight: 400;
+    display: inline-block; 
+    line-height: 40px;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  #features{
+      width: 50%;
+      display: flex;
+      margin: 0 auto;
+      /* border: 1px solid; */
+      /* align-items: center; */
+      justify-content: center;
+      padding: 50px 0;
+      
+  }
+  hr{
+    /* background-color: aqua; */
+    border: 0.2px solid rgb(243, 243, 243);
+  }
+
+  #features div{
+      /* border: 1px solid black; */
+      /* width: fit-content; */
+      margin: 10px;
+      
+  }
+
+  
+
+ .detail{
+     /* border: 1px solid; */     
+      width: 260px;
+      font-size: 18px;
+      font-weight: 400;     
+      /* color: rgb(136, 151, 162); */
+  }
+
+
+  .detail img{
+      margin-left: 20px;
+  }
+
+  .detail p{
+      display: inline;
+      color: rgb(136, 151, 162);
+      text-decoration: none;
+      line-height: 25px;
+  }
+
+  #download{
+      width: 60%;
+      margin: 60px auto;
+      display: flex;
+  }
+
+  .mobile-img img{
+      width: 250px;
+  }
+
+  .download-button{
+      /* font-size: 14px; */
+      margin: 0 100px;
+      padding-top: 10px;
+  }
+
+  .download-button > .buttons{
+    display: flex;
+    /* background-color: rgb(0, 0, 0); */
+  }
+  .download-button > .buttons a{
+      background-color: rgb(85, 85, 85);
+      display: flex;
+      border: 1px solid;
+      border-radius: 10px;
+      width: 180px;
+      margin: 20px;
+      padding: 10px 0;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+  }
+  .download-button > .buttons a:hover{
+      background-color: rgb(75, 75, 75);
+  }
+
+
+  .download-button > .buttons a div{
+      margin-left: 15px;
+      display: grid;
+      place-items: center;
+  }

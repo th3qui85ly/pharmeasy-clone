@@ -22,7 +22,7 @@ let CustomerData = [
     }
 ]
 
-                CustomerSay(CustomerData);
+                // CustomerSay(CustomerData);
                 function CustomerSay(data) {
                     let carousal_div = document.getElementById("carousal-div-customer");
                     console.log("Hello");
