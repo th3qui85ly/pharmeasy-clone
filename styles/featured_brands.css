@@ -1,0 +1,126 @@
+#featured-brands{
+    width: 80%;
+    height: max-content;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    user-select: none;
+    /* display: flex; */
+}
+
+.heading{
+    font-size: 20px;
+    color: rgb(79, 88, 94);
+    line-height: 50px;
+    font-weight: 700;
+    display: flex;
+    /* border: 1px solid; */
+    width: 600px;
+    vertical-align: middle;
+    vertical-align: baseline;
+    /* padding-top: 8px; */
+    margin-left: 0;
+}
+
+
+
+.navigator .button{
+    vertical-align: middle;
+    text-align: right;
+    background-color:transparent;
+    /* width: 25px; */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 7px;
+    flex: 0 0 auto;
+    /* right: 0; */
+    /* margin-right: 10%; */
+    /* margin-right: 2%; */
+
+}
+
+.navigator .button:hover{
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px rgb(192, 192, 192);
+    /* padding: 7px; */
+    
+}
+
+.inactive-button{
+    color: gray;
+    border: none;
+    font-size: 20px;
+    padding: 7px;
+    vertical-align: middle;
+    margin-right: 2%;
+}
+.inactive-button:hover{
+    /* background-color: transparent;
+    box-shadow: none; */
+    border: none;
+}
+
+
+#carousal-div-featured{
+    margin-top: 10px;
+    display: flex;
+   /* max-height: 270px; */
+    /* border: 1px solid black; */
+    width: 100%;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    /* flex-wrap: nowrap; */
+    overflow-x: auto;
+    /* padding-left: 0; */
+    /* -webkit-overflow-scrolling: touch; */
+    transition: all 1.15s;
+    /* cursor: -webkit-grabbing; */
+    /* border: 1px solid black; */
+    user-select: none;
+}
+
+#carousal-div-featured::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+#carousal-div-featured .brand-card{
+    display: flex;
+    /* flex-direction: row; */
+    flex: 0 0 auto;
+    object-fit: cover;
+    margin-right: 20px;
+    height: max-content;
+    width: max-content;
+    max-width: 100%;
+    /* padding: 20px; */
+    /* border: 1px solid rgb(255, 0, 0); */
+    border-radius: 7px;
+    overflow: auto;
+    transform: scale(0.95);
+    transition: all 0.8s;
+    
+}
+
+.brand-link{
+    text-decoration: none;
+    color: black;
+}
+
+.img-div{
+    width: 175px;
+    height: 241px;
+}
+.img-div  img{
+    width:100%;
+    height: 100%;
+    vertical-align: middle;
+    vertical-align: baseline;
+}
+
+#carousal-div-featured .brand-card:hover{
+    transform: scale(1);
+}
