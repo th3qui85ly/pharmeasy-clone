@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+body{    
+font-family: 'Open Sans', sans-serif;
+}
+
+
+.heading{
+    font-size: 20px;
+    color: rgb(79, 88, 94);
+    line-height: 50px;
+    font-weight: 700;
+    display: flex;
+    /* border: 1px solid; */
+    width: fit-content;
+    vertical-align: middle;
+    vertical-align: baseline;
+    /* padding-top: 8px; */
+    margin-left: 0;
+}
+
+#offers-just{
+    width: 80%;
+    height: 200px;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    user-select: none;
+}
+
+
+
+/* Div One Title and navigation */
+
+.div-one{
+    display: flex;
+    font-size: 25px;
+    /* font-weight: bold; */
+    /* background-color: yellow;    */
+    vertical-align: middle;
+    /* width: 20%; */
+    /* object-fit: cover; */
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.navigator{
+    display: flex;
+    /* float: right; */
+    /* text-align: right;
+    align-items: right; */
+    /* margin-left: 57%; */
+    /* width: max-content; */
+    /* min-width: 400px; */
+    /* vertical-align: middle; */
+    /* border: 1px solid black; */
+    line-height: 25px; 
+    /* margin-right: 1%; */
+    /* position:static; */
+    /* width: 300px; */
+    /* background-color: aqua; */
+    justify-content: space-between;
+    max-width: 40%;
+    min-width: 15%  ;
+}
+.navigator a{
+    color: rgb(16, 132, 126);
+    text-decoration: none;
+    font-weight:600;
+    font-size: 18px;
+    width: 200px;
+    /* font-weight: bold; */
+    /* margin-right: 2%;    */
+    /* vertical-align: baseline; */
+    padding-top: 8px;
+
+}
+
+img{
+    width: 50px;
+    /* padding-bottom: 0; */
+    /* margin-bottom: 5px; */
+    vertical-align: middle; 
+    margin-right: 0;
+    /* border:  1px solid; */
+    /* margin: 0; */
+    /* font-size: 25px;     */
+}
+.navigator .button{
+    vertical-align: middle;
+    background-color:transparent;
+    /* width: 25px; */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 7px;
+    margin-right: 5%;   
+    margin-left: 10%;
+
+}
+
+.navigator .button:hover{
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px rgb(192, 192, 192);
+    /* padding: 7px; */
+    
+}
+
+.inactive-button{
+    color: gray;
+    border: none;
+    font-size: 20px;
+    padding: 7px;
+    vertical-align: middle;
+    /* margin-right: 2%; */
+    margin-left: 10%;
+}
+.inactive-button:hover{
+    /* background-color: transparent;
+    box-shadow: none; */
+    border: none;
+}
+
+
+#carousal-div{
+    margin-top: 10px;
+    display: flex;
+   /* max-height: 270px; */
+    /* border: 1px solid black; */
+    width: 100%;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    /* flex-wrap: nowrap; */
+    overflow-x: auto;
+    /* padding-left: 0; */
+    /* -webkit-overflow-scrolling: touch; */
+    transition: all 1.15s;
+    /* cursor: -webkit-grabbing; */
+    /* border: 1px solid black; */
+    user-select: none;
+}
+
+
+#carousal-div::-webkit-scrollbar{
+    width: 0;
+}
+
+#carousal-div::-webkit-scrollbar-track{
+    /* --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) */
+}
+
+
+.order-link{
+    text-decoration: none;
+    color: black;
+}
+
+
+#carousal-div .offer-card{
+    display: flex;
+    flex: 0 0 auto;
+    object-fit: cover;
+    margin-right: 20px;
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 7px;
+    overflow: auto;
+    transform: scale(0.95);
+    transition: all 0.8s;
+    /* transition-delay: 1000ms; */
+}
+
+.active{
+    /* background: rgba(250, 14, 14, 0.3); */
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+#carousal-div .offer-card:hover{
+    transform: scale(1);
+}
+
+.logo-div{
+    width: 80px;
+    height: 80px;
+}
+.logo-div  img{
+    width:100%;
+    height: 100%;
+    vertical-align: middle;
+    vertical-align: baseline;
+}
+.info{
+    width: 200px;
+    height: 80px;
+    margin-left: 10px;
+    line-height: 1.3;
+}
+.info .title{
+    font-size: 18px;
+    /* font-weight: 600; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* line-height: 1.3; */
+    height: 48px;
+    overflow: hidden;
+    vertical-align: middle;
+
+}
+.code{
+    color: grey;
+    font-size: 18px;
+    /* line-height: 1.5; */
+}
+.code .span{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    /* line-height: 1.5; */
+}
+.code .code_inactive{
+    color: gray; 
+    font-size: 18px;   
+    /* line-height: 1.5; */
+}
+
+@media(max-width:1906px)
+   {
+        .navigator{
+            margin-left: 500px;
+        }            
+   }
