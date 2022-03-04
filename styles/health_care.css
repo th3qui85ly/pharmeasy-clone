@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+body{    
+font-family: 'Open Sans', sans-serif;
+}
+
+.main-carousel{
+    width: 60%;
+    height: 50%;
+    margin: 5% auto;
+}
+
+.cell{
+    width: 70%;
+    margin: 0 15px;
+    /* overflow: hidden; */
+    border-radius: 8px;    
+}
+
+.cell img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    /* object-fit: cover; */
+}
+#product-grid{
+    width: 60%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    gap: 10px;
+    /* border: 1px solid; */
+}
+
+.car-card{
+    display: flex;
+    border: 1px solid rgb(223, 221, 221) ;  
+    border-radius: 8px;
+    padding: 10px 0;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.car-card:hover{
+    cursor: pointer;
+    /* box-sizing: border-box; */
+    border: 1px solid rgb(0, 17, 255);
+    box-shadow: 1px 1px 1px 1px rgb(5, 1, 243);
+}
+
+.car-card div{
+    margin: 5px;
+    /* border: 1px solid; */
+    padding: 10px;
+}
+.img-div{
+    padding-left: 50px;
+    /* background-color: aqua; */
+}
+.img-div img{
+    margin-left: 20px;
+}
+
+.category{
+    color: rgb(74, 74, 74);
+    font-size: 16px;
+    /* border: 1px solid; */
+    width: 150px;
+    display: grid;
+    /* height: 50px;   */
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+    place-items: center;
+}
+
+
+.off{
+    color:rgb(22, 135, 110);
+    width: 50px;
+    text-align: right;
+    text-indent: 0px;
+    display: grid;
+    place-items: center;
+    place-items: right;
+    font-size: 14px;
+    padding-top: 12px;
+    font-weight: 400;
+}
