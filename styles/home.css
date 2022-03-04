@@ -34,10 +34,12 @@
 
 .b2{
     background-image: url("https://assets.pharmeasy.in/web-assets/dist/c7c7095b.png");
+   
 }
 
 .b3{
     background-image: url("https://assets.pharmeasy.in/web-assets/dist/e1d3ac1c.png");
+   
 }
     
 
@@ -51,17 +53,21 @@
      background-color: rgb(191, 243, 226); 
      display: flex;
     flex-direction: column;
+    
 }
 
 .combine2{
     background-image: url("https://assets.pharmeasy.in/web-assets/dist/c7c7095b.png"); 
-    background-color: rgb(250, 240, 206)!important;
+    background-color: rgb(250, 240, 206);
+   
 
 }
 
 .combine3{
     background-image:url("https://assets.pharmeasy.in/web-assets/dist/e1d3ac1c.png");
     background-color: rgb(204, 241, 252);
+    
+    
 }
 
 .discount{
