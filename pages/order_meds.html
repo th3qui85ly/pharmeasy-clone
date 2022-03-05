@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>💊 Online Medicine Order - Buy Medicines Online with Discount | PharmEasy</title>
-    <link rel="stylesheet" href="./styles/ordermed.css" />
+    <link rel="stylesheet" href="../styles/order_meds.css" />
+    <link rel="stylesheet" href="../styles/offersJustForYou.css">
 </head>
 
 <body>
-    <div id="container">
-        <button class="back_button" onclick="window.location.href='index.html'"><</button>
-        <h2 class="head">Sample Heading</h2>
+    <div id="main_r1">
+        <div id="main_r1c1">
+            <div id="main_r1c1_child">
+                <div id="main_r1c1_child_headings">
+                    <div class="main_r1c1_child_heading" id="main_r1c1_child_heading_first">Flat 18% Off</div>
+                    <div class="main_r1c1_child_heading">1 lakh+ Products</div>
+                    <div class="main_r1c1_child_heading">Easy Returns</div>
+                </div>
+                <div id="search_heading_shiv">Search for Medicines / Healthcare Products</div>
+                <div class="order_meds-search">
+                    <div id="search-box">
+                        <select name="city" id="city">
+                            <option value="select-city">Select City</option>
+                            <option value="bengaluru">Bengaluru</option>
+                            <option value="delhi">Delhi NCR</option>
+                            <option value="pune">Pune</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                        <input class="search_input" type="text" placeholder="Search Medicines Healthcare Products" />
+                        <button id="order_search_btn">&#128269;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_r1c2">
+            <div id="prescription">
+                <div>Order via Prescription</div>
+            </div>
+            <div id="no_prescription">
+                <p>Don't have a Prescription?</p>
+                <ul>
+                    <li>Add Medicines to your Cart</li>
+                    <li>Select Free Doctor Consultation at checkout.</li>
+                </ul>
+                <div id="call_us">
+                    <div id="call_us_child">Or Call us On +91 99929 99929 </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 28 28">
+                            <path fill="#FFF" fill-rule="nonzero"
+                                d="M8.854 12.843a14.49 14.49 0 0 0 6.303 6.303l2.105-2.104a.951.951 0 0 1 .975-.23c1.072.354 2.23.545 3.415.545a.96.96 0 0 1 .957.957v3.338a.96.96 0 0 1-.957.957c-8.982 0-16.26-7.28-16.26-16.261a.96.96 0 0 1 .956-.957h3.348a.96.96 0 0 1 .956.957c0 1.195.191 2.343.545 3.415a.96.96 0 0 1-.239.975l-2.104 2.105z">
+                            </path>
+                        </svg></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="offers-just">
+        <div class="div-one">
+
+            <div class="heading"> <img src="../images/Offers For You/Offers Just For You.svg"
+                    alt="Offers For you" />Offers Just For You</div>
+            <div class="navigator">
+                <a href="">See All offers</a>
+                <span class="button" id="slider-left">&#129136;</span>
+                <span class="button" id="slider-right">&#129138;</span>
+            </div>
+        </div>
+        <div id="carousal-div"></div>
     </div>
 
+
+    <!-- FAQs section -->
+
+
+    <section id="faq_section">
+        <div class="question">
+            <h3>✅Is buying Medicines online safe?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+        </div>
+        
+        <div class="answer">
+            <p>
+                Absolutely! All our medicines undergo a three-step quality check process to ensure they are of high
+                quality.
+                We source our products only from licensed retail pharmacies.
+                PharmEasy is used by 5M+ users across 1.2k+ cities in India incl. Bangalore, Delhi, Mumbai, Kolkata,
+                Hyderabad, Gurgaon, Noida, Pune, etc. for purchasing medicines online.
+            </p>
+        </div>
+        
+    </section>
+
+
 </body>
+
 </html>
+<script src="../Js Files/offers_for_you_for_order_page.js"> </script>
