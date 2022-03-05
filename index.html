@@ -3,14 +3,351 @@
 
 <head>
     <title>Pharmeasy | Clone</title>
-<<<<<<< HEAD
+
+    <link rel="stylesheet" href="./styles/offersJustForYou.css">
+    <link rel="stylesheet" href="./styles/featured_brands.css">
+    <link rel="stylesheet" href="./styles/health_articles.css">
+    <link rel="stylesheet" href="./styles/customer.css">
+<!-- shivam files -->
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/button.css">
 
+    <!-- shivansh Files -->
+
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <!-- <link rel="stylesheet" href="./styles/home.css" /> -->
+    <!-- <link rel="stylesheet" href="./styles/footer.css" /> -->
+    <!-- <link rel="stylesheet" href="./styles/button.css" /> -->
+
+    
 </head>
 
 <body>
+
+
+
+<!-- Shivansh Navbar -->
+
+  <header id="nav-head">
+      <div class="navbar">
+        <div class="navbar-top">
+          <div class="navbar-logo">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
+              alt="Pharmeasy logo"
+            />
+          </div>
+          <div class="navbar-search">
+            <div id="search-box">
+              <select name="city" id="city">
+                <option value="select-city">Select City</option>
+                <option value="bengaluru">Bengaluru</option>
+                <option value="delhi">Delhi NCR</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+              </select>
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Search here"
+              />
+              <div id="suggestion"></div>
+              <button>&#128269;</button>
+            </div>
+          </div>
+          <div class="navbar-side">
+            <button onclick="" id="nav-btn">
+              Don't have a prescription? <br /><span>Get started </span
+              ><i class="arrow down"></i>
+            </button>
+          </div>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-tab">
+            <div id="tab-nav">
+              <button class="tab1">Order Medicines</button>
+              <button class="tab1">Healthcare Products</button>
+              <button class="tab1">Diagonstic Tests</button>
+            </div>
+          </div>
+          <div class="navbar-button">
+            <div id="btn-nav">
+              <button class="tab2">Offers</button>
+              <button class="tab2">Login/ Signup</button>
+              <button class="tab2">Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <!-- <div class="ss-container">
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/87bb46bee08-PMEY20DWEB.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/b54f4e1b5c6-otc_sale_ends_hp_dweb.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/25b29fcaa01-DWEBSUPR20.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/9e172a2bf75-prioritydweb.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/99b110cdccb-PHEA20.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/ec027bde5da-diabetic_slipper_Dweb.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/8fe18b32048-Advanced_Full_Body_Checkup_Dweb_NEWtwo.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://cms-contents.pharmeasy.in/banner/1b19d5cef0f-GoCoronaGoWeb.jpg?dim=1440x0&dpr=1&q=100"
+        class="pics"
+      />
+    </div>
+
+    <a class="prev" class="material-icons" onclick="plusSlides(-1)"
+      >&#10094;</a
+    >
+    <a class="next" class="material-icons" onclick="plusSlides(1)"
+      >&#10095;</a
+    >
+
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+  </div> -->
+
+
+<!-- End of Shinvansh Navbar -->
+
+
+    <!-- <h1>Offers Just For You</h1> -->
+    <!-- Offers Just For you -->
+    <div id="offers-just">
+        <div class="div-one">
+           
+            <div class="heading_sushant"> <img src="./Images/Offers For You/Offers Just For You.svg" alt="Offers For you" />Offers Just For You</div>
+
+            <div class="navigator">
+                <a href="">See All offers</a>
+                <span class="button" id="slider-left">&#129136;</span>
+                
+                <span class="button" id="slider-right">&#129138;</span>
+            </div>
+    </div>
+
+            
+                <div id="carousal-div">
+
+                </div>
+            
+    </div>
+        
+    <!--End of Offers Just For you -->
+
+    <!-- Featured Brands  -->
+    <div id="featured-brands">
+        <div class="div-one">
+            <span class="heading_sushant">Featured Brands</span>
+
+            <span class="navigator">
+                <a href=""></a>
+                <span class="button" id="slider-left-featured">&#129136;</span>
+                
+                <span class="button" id="slider-right-featured">&#129138;</span>
+            </span>
+        </div>
+
+            
+                <div id="carousal-div-featured">
+                    
+                </div>
+            
+        
+    </div>
+    
+
+
+    <!-- End of Featured Brands -->
+
+    <!-- Health Articles  -->
+    
+    <div id="health-articles">
+        <div class="div-one">
+            <span class="heading_sushant">Health Articles</span>
+
+            <span class="navigator">
+                <a href="">See All</a>
+                <span class="button" id="slider-left-article">&#129136;</span>
+                
+                <span class="button" id="slider-right-article">&#129138;</span>
+            </span>
+        </div>
+            
+                <div id="carousal-div-article">
+                    <!-- <img src="./Images/Health Articles/01.jpg" alt=""> -->
+                </div>
+            
+        
+    </div>
+
+
+    <!-- End of Health Articles -->
+    
+        <!-- Deals of the Day    -->
+    
+    <!-- <div id="deals">
+        <div class="div-one">
+            <div class="div-one"><img src="./Images/Deals of the Day/Icon.svg" alt="Offers For you" />
+            <span style="font-weight: bold;">Deals of the Day</span>
+
+            <span class="navigator">
+                <a href="">See All</a>
+                <span class="button" id="slider-left-deals">&#129136;</span>
+                
+                <span class="button" id="slider-right-deals">&#129138;</span>
+            </span>
+            <div>
+                <div id="carousal-div-deals">
+                     <img src="./Images/Health Articles/01.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div> --> 
+
+
+    <!-- End of Deals of the Day -->
+
+
+
+
+    <!-- What Our Customer Have to Say -->
+    
+    <div id="customer-msg">
+        <div class="div-one">
+            <span class="heading_sushant">What our customer Have to say</span>
+
+            <span class="navigator">
+                <a href=""></a>
+                <span class="button" id="slider-left-customer">&#129136;</span>                
+                <span class="button" id="slider-right-customer">&#129138;</span>
+            </span>
+            </div>
+    
+           
+                <div id="carousal-div-customer">
+                    <!-- <img src="./Images/Health Articles/01.jpg" alt=""> -->
+                    <div class="customer-card">
+                      <div class="customer-name">Tirthankar Das Purkayastha</div>
+                      <div class="customer-date">April 23, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">Very good app. Would recommend it to everyone requiring fast and efficient delivery of 
+                        medicinal products at the doorstep.</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Debanjan Roy</div>
+                      <div class="customer-date">April 18, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">Excellent experience. Pharmeasy has not let it's customers down during lockdown. 
+                        Thanks team. Great job. The application is also very smooth. And does its job well with an attractive UI and easy to use features. Good job developer.</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Rohini Sarkar</div>
+                      <div class="customer-date">April 21, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">Very helpful and friendly app in terms of usability, customer support 
+                        &amp; money saving from the point of medical necessity of every person.</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Varun Sonagra</div>
+                      <div class="customer-date">April 23, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">I've had a good experience. The consultation with a doctor feature works well too. 
+                        The prices and discounts are great too. Overall the simplicity of the app is a plus too. I recommend this app. 
+                        Will always be a customer/user now! Genuinely!</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Rajashri Sarkar</div>
+                      <div class="customer-date">April 22, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">The app is really wonderful. Being a Product Manager myself, I would say that the User 
+                        experience (UI/UX) of the app is top notch (easy to use, simple and convenient). Coming to services and 
+                        delivery, I would say Pharmeasy is doing a tremendous job even during this unprecedented pandemic situation.</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Darpan Dhoalkia</div>
+                      <div class="customer-date">April 23, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">Best service and app amongst all available. I have been using it for more than 3 years, 
+                        and even during the pandemic, they have kept their standards high and are delivering the order within 24 hours. 
+                        Keep up the good work.</div>
+                      </div>
+                    </div>
+                    <div class="customer-card">
+                      <div class="customer-name">Lipi Chaudhuri</div>
+                      <div class="customer-date">April 15, 2020</div>
+                      <div class="code"><img src="./Images/Customer Have to Say/Code.svg" alt="">
+                      <div class="customer-msg">This app is a game changer for me. I am unable to go out always to buy 
+                        medicinal products. Pharmeasy gives me the last liberty to shop essential healthcare products 
+                        from home. The app is very user friendly and me being an elderly person do not find any difficulty in 
+                        using it. They deliver well in time. Thanks😊</div>
+                      </div>
+                    </div>
+
+                </div>
+            
+    </div>
+    
+
+
+    <!-- End of Customer Have to Say -->
+
+
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/button.css">
+
+
+    <!-- Footer by Shivam -->
 
     <div id="container" role="button">
         <div id="btn">
@@ -162,10 +499,17 @@
         <img class="extra" id="rupay" src="./images/rupay.png" alt="">
     </div>
 
+    <!-- End of Footer -->
 </body>
-
+        
 </html>
-=======
+
+        <script src="./Js Files/OfferForYou.js"> </script>
+        <script src="./Js Files/featuredBrands.js"> </script>
+        <script src="./Js Files/healthArticles.js"> </script>
+        <script src="./Js Files/Customer.js"> </script>
+  
+
     <link rel="stylesheet" href="./styles/offersJustForYou.css">
     <link rel="stylesheet" href="./styles/featured_brands.css">
     <link rel="stylesheet" href="./styles/health_articles.css">
@@ -306,7 +650,7 @@
 <script src="./Js Files/featuredBrands.js"> </script>
 <script src="./Js Files/healthArticles.js"> </script>
 <script src="./Js Files/Customer.js"> </script>
-=======
+
 <link rel="stylesheet" href="./styles/footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./styles/button.css">
@@ -315,5 +659,4 @@
 
 
 </html>
-master
->>>>>>> bbeb6c77df1d7fa281516617259e1ccf19c989f1
+
