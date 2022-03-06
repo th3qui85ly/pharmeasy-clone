@@ -3,6 +3,8 @@ let m_img = document.getElementById("m-image");
 let bttndiv = document.getElementById("button-div");
 let addtoCartBttn = document.getElementById("AddtoCartButton");
 
+let med_names = JSON.parse(localStorage.getItem("med_names"));
+
 let all_img = document.querySelectorAll(".other-images");
 // console.log(all_img[0].children);
 let ele = all_img[0].children;
@@ -19,6 +21,8 @@ for(let i = 0; i < ele.length; i++)
         changeImg(e.target);
     })
 }
+
+
 
 function changeImg(a){    
     m_img.src = a.src;
@@ -47,6 +51,33 @@ function addquantity(e){
         cart.setAttribute("class","view-cart");
         cart_msg.textContent = "";
         cart_msg.textContent = select.value + " Item(s) in Cart";    
+
+        let name = med_names[0].name;
+        let img = med_names[0].img1;
+        let price = med_names[0].price;
+        let mrp = med_names[0].MRP;
+        let cart_m = select.value;
+
+        let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+        // let med_names = JSON.parse(localStorage.getItem("med_names"));
+        // console.log(med_names);
+
+        if(medicine_storage == null)
+        {
+            localStorage.setItem("medicine_storage",JSON.stringify([]));
+        }
+
+        medicine_storage.push({name,img,price,mrp,cart_m});
+
+        console.log(medicine_storage);
+        med_names[0].cart = select.value;
+        localStorage.setItem("med_names",JSON.stringify(med_names))
+        cart.addEventListener("click",()=>{
+            location.href = "./Cart.html";
+        });
+        localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
+
+        
     }
 }
 
@@ -62,42 +93,42 @@ let frequent_data = [
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/02.webp",
             "title" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "20 Tablet(s) in Strip",
             "mrp" : "399",
             "price": "₹199.5"
         },
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/03.webp",
             "title" : "Evion 400mg Strip Of 10 Capsules",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "6 Tablet(s) in Strip",
             "mrp" : "32.7",
             "price": "₹28.78"
         },
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/04.webp",
             "title" : "Neurobion Forte Tablet 30'S",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "09 Tablet(s) in Strip",
             "mrp" : "34.7",
             "price": "₹30.19"
         },
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/05.webp",
             "title" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "18 Tablet(s) in Strip",
             "mrp" : "415",
             "price": "₹385.95"
         },
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/06.webp",
             "title" : "Cremaffin Fresh Tablets Strip Of 10",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "10 Tablet(s) in Strip",
             "mrp" : "₹10.87",
             "price": "₹8.91"
         },
         {
             "image" : "../Images/AddtoCart Page/Crousel Image/07.webp",
             "title" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
-            "tablets": "15 Tablet(s) in Strip",
+            "tablets": "12 Tablet(s) in Strip",
             "mrp" : "₹849",
             "price": "₹466.95"
         }
@@ -106,11 +137,67 @@ let frequent_data = [
 
 
 let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+// let med_names = JSON.parse(localStorage.getItem("med_names"));
+// console.log(med_names);
 
         if(medicine_storage == null)
         {
             localStorage.setItem("medicine_storage",JSON.stringify([]));
         }
+
+
+
+
+
+        showClickedItem();
+        function showClickedItem(){
+            let med_names = JSON.parse(localStorage.getItem("med_names"));
+            let home_medicine = document.getElementById("home-name-medicine");
+            home_medicine.textContent = med_names[0].name;
+            let main_image = document.getElementById("m-image");
+            main_image.src = med_names[0].img1;
+
+            let img1 = document.getElementById("01");
+            img1.src = `../Images/AddtoCart Page/Ecosprin/0${Math.floor(Math.random() * 10)}.webp`;
+            let img2 = document.getElementById("02");
+            img2.src = med_names[0].img2;
+            let img3 = document.getElementById("03");
+            img3.src = med_names[0].img3;
+            let img4 = document.getElementById("04");
+            img4.src = med_names[0].img4;
+            let img5 = document.getElementById("05");
+            img5.src = med_names[0].img5;
+            let img6 = document.getElementById("06");
+            img6.src = med_names[0].img6;
+
+            let name = document.querySelector(".medicine-name");
+            name.textContent = med_names[0].name;
+
+            // let strip = document.querySelector(".medicine-strip");
+            // strip.textContent = med_names[0].tablets;
+
+            let mrp = document.getElementById("price-addToCart");
+            mrp.textContent = "₹ "+med_names[0].MRP;
+
+            let price = document.getElementById("mrp-addToCart");
+            price.textContent = "₹ "+med_names[0].price;
+ 
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 carousel(frequent_data);
 function carousel(data){

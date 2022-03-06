@@ -59,16 +59,16 @@ let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
         localStorage.setItem("medicine_storage",JSON.stringify([]));
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
 
-        medicine_storage.push(
-            {
-                "name":"Crosin", 
-                "img": "../Images/AddtoCart Page/Ecosprin/01.webp",
-                "price": "3.50",
-                "mrp" : "4.29"
-            }        
-            );
+        // medicine_storage.push(
+        //     {
+        //         "name":"Crosin", 
+        //         "img": "../Images/AddtoCart Page/Ecosprin/01.webp",
+        //         "price": "3.50",
+        //         "mrp" : "4.29"
+        //     }        
+        //     );
 
-            localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
+        //     localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
     }
 
 
@@ -180,18 +180,97 @@ let slider = document.getElementById("frequently-brougth-crousel");
     function fetchingFromStorage(){
 
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+        let cart_count = document.querySelector(".cart-count");
+        
+
+        let container = document.querySelector(".cart-items");
+        medicine_storage.forEach((item)=>{
+            let item_card = document.createElement("div");
+            item_card.setAttribute("id","item-card");
+            item_card.innerHTML = `
+            <div id="image" style="margin-left: -2px;"><img src="${item.img}" width="80px" height="50px" style="margin-top: 30px;" id="cart-image" alt=""></div>
+            <div id="medicine-info">
+                <div class="title-medicine-cart">${item.name}</div>
+                <div class="provider-medicine-cart">By USV PVT LTD</div>
+                <div class="strip-medicine-cart">14 Tablet(s) in Strip</div>
+                <select>
+                   <option value="" selected disabled hidden>Qty 0</option>
+                    <option value ="1" name = "Qty 1">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>    
+                   </select>       
+                <div class="delevery-date">Delivery <span style="font-weight: 600;">9 Mar - 10 Mar</span> </div>
+                
+            </div>
+            <div id="price-action">
+                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
+                <div class="price">
+                   <span style="font-size: 13px; font-weight: 500;  color: rgb(230, 66, 66);">18% OFF <span style="text-decoration: line-through; color: rgb(79, 88, 94);" class="price-mrp">₹ ${item.mrp} </span> </span> <br>
+                    <span style="font-size: 18px; font-weight: bold; color: rgb(79, 88, 94);" class="price-price">₹ ${item.price}*</span>
+                </div>
+            </div>
+            `
+
+            container.append(item_card);
 
 
-        let image = document.getElementById("image");
-        image.src = medicine_storage[0].img;
 
-        let   title = document.querySelector(".title-medicine-cart");
-        title.textContent = medicine_storage[0].name; 
 
-        let mrp = document.querySelector(".price-mrp");
-        mrp.textContent = medicine_storage[0].mrp;
-        let price = document.querySelector(".price-price");
-        price.textContent = medicine_storage[0].price;
+
+
+
+            // let cart_price = document.getElementById("cart-price");
+            // let sum = 0;
+            // medicine_storage.forEach((data)=>{
+            //     sum += data.price;
+            // })
+            // cart_price.textContent = "₹ "+((sum-1)*medicine_storage[0].cart_m);
+    
+            // let total_price = document.getElementById("total-price");
+            // total_price.textContent =  "₹ "+ ((sum-1)*medicine_storage[0].cart_m);
+    
+            // let image = document.getElementById("cart-image");
+            // image.src = medicine_storage[0].img;
+    
+            // let   title = document.querySelector(".title-medicine-cart");
+            // title.textContent = medicine_storage[0].name; 
+    
+            // let mrp = document.querySelector(".price-mrp");
+            // mrp.textContent = "₹ "+ medicine_storage[0].mrp;
+            // let price = document.querySelector(".price-price");
+            // price.textContent = "₹ "+ medicine_storage[0].price;
+
+
+        })
+
+        let cart_price = document.getElementById("cart-price");
+        let sum_price = 0;
+        let sum_items = 0;
+        medicine_storage.forEach((data)=>{
+            sum_price += data.price;
+            sum_items += data.cart_m;
+        })
+
+        cart_count.textContent = sum_items +" Item(s) in Cart";
+        cart_price.textContent = "₹ "+((sum_price-1)*medicine_storage[0].cart_m);
+
+        let total_price = document.getElementById("total-price");
+        total_price.textContent =  "₹ "+ ((sum_price-1)*medicine_storage[0].cart_m);
+
+        // let image = document.getElementById("cart-image");
+        // image.src = medicine_storage[0].img;
+
+        // let   title = document.querySelector(".title-medicine-cart");
+        // title.textContent = medicine_storage[0].name; 
+
+        // let mrp = document.querySelector(".price-mrp");
+        // mrp.textContent = "₹ "+ medicine_storage[0].mrp;
+        // let price = document.querySelector(".price-price");
+        // price.textContent = "₹ "+ medicine_storage[0].price;
 
         
     }
