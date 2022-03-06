@@ -189,8 +189,10 @@ div:empty{
     /* border-bottom: 1px solid #cecece; */
     margin: 0;
     font-size: 90%;
+
     color:black;
     text-decoration: none;
+
 }
 #results_div > p:hover{
     cursor: pointer;
