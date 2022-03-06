@@ -46,7 +46,7 @@ body{
     margin-left: 0;
     font-size: 80%;
 }
-#svg_shiv{
+svg{
     color: #10847e;
     margin-right: 3%;
     height:33px;
