@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+body{    
+font-family: 'Open Sans', sans-serif;
+}
+
+
+#online-medicine-container{
+    width: 60%;
+    /* border: 1px solid black; */
+    margin: 5% auto;
+}
+ .online-path p{
+     font-size: 13px;
+     color: rgb(104, 104, 104);
+ }
+
+.online-path a{
+    text-decoration: none;
+    color: black;
+}
+
+.images-cart{
+    display: flex;
+    margin: 10px;
+    /* height: 300px; */
+}
+.images-cart div{
+    margin-top: 10px;
+}
+
+
+.images{
+    width: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    /* margin: 10px; */
+}
+
+.cart-links{
+    margin-left: 40.3%;
+    width: 23.4%;
+    position: fixed;
+    /* border: 1px solid black; */
+}
+.actual-images{
+    /* border: 1px solid black; */
+    width: 45%;
+
+}
+.main-image{
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 0 30px;
+    /* height: 250px; */
+    /* display: grid; */
+    
+}
+.main-image img{
+    width: 100%;
+    padding: 20px 0;
+    /* border: 1px solid; */
+}
+
+.actual-images div{
+    /* margin: 10px; */
+    /* border: 1px solid; */
+     text-align: right;
+}
+
+.other-images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid rgb(21, 255, 0); */
+    gap: 10px;
+    margin: 0;
+    /* text-align: center; */
+    /* place-items: center; */
+    vertical-align: middle;
+}
+.other-images div{
+    vertical-align: middle;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid rgb(149, 149, 149);
+}
+
+.other-images div:hover{
+    cursor: pointer;
+}
+
+#active-div{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.other-images img{
+    vertical-align: middle;
+    width: 100%;
+    /* height: 50%; */
+    overflow: hidden;
+}
+.medicine-info{
+    margin-left: 20px;
+}
+.medicine-name{
+    color: rgb(79, 88, 94);
+    width: 80%;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.medicine-provider{
+    color: rgb(104, 104, 104);
+    font-size: 14px;
+}
+
+.medicine-strip{
+    color: rgb(79, 88, 94);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.medicine-info button{
+    background-color: rgb(16, 132, 126);
+    font-size: 18px;
+    width: 150px;
+    font-weight: 600;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+select{
+    width: 150px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+option{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+option:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 76);
+}
+
+
+.cart-msg{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(79, 88, 94);
+    padding: 10px;
+}
+
+.view-cart{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(16, 132, 126);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+.view-cart button:hover{
+    background-color: rgb(10, 80, 76);
+}
+
+ .inactive-button{
+    background-color: rgb(161, 161, 161);
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    /* cursor: pointer; */
+    border: none;
+}
+
+.quick-links{
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(80, 84, 87);
+    padding: 10px;
+}
+.links ul{
+    margin-top: -15px;
+    width: 90%;
+    /* border: 1px solid; */
+    /* display: inline; */
+    /* width: 100%; */
+    /* overflow:scroll; */
+    /* justify-items: auto; */
+    /* justify-content: center; */
+    /* justify-self: center; */
+    /* grid-template-columns: auto auto auto; */
+    list-style: none;
+}
+
+.links ul li {
+    /* margin-top: 50px; */
+    display: inline;
+    margin-right: 25px;
+}
+
+.links ul li a{
+    width: auto;
+    color:rgb(16, 132, 126);
+    font-weight: 800;
+    
+}
+.links li::before {
+    content: "\2022";
+    color: rgb(22, 135, 110);
+    font-size: 25px;
+    /* font-weight: 400; */
+    /* display:inline-block;  */
+    /* line-height: 40px; */
+    width: 1em;
+    /* margin-top: -10px; */
+    /* margin-top: -5em; */
+    margin-left: -1em;  
+    margin-right: 5px;
+    
+  }
+
+  .bottom{
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 50px;
+      /* border: 1px solid; */
+      margin-top: -80px;
+  }
+
+  .bottom .div-1{
+    width: 60%;
+    /* border: 1px solid; */
+    margin-top: 10px;
+  }
+
+  .div-1 .store-img{
+      width: 85%;
+      font-size: 14px;
+      color: rgb(80, 84, 87);
+      background-color: #e9f9ff;
+      padding: 3px;
+      padding-left: 20px;
+      border-radius: 8px;
+  }
+
+  .more-medicines{
+      font-size: 18px;
+      font-weight: 800;
+      color:rgb(16, 132, 126);
+  }
+
+  .more-medicines p {
+      font-size: 15px;
+      font-weight: normal;
+      margin-left: 50px;
+      margin-top: -5px;
+      color: rgb(80, 84, 87);
+  }
+
+  #frequently-brougth-crousel{
+      display: flex;
+      overflow-x: auto;
+      transition: all 1.15s;
+      user-select: none;
+  }
+  #frequently-brougth-crousel::-webkit-scrollbar{
+      width: 0;
+  }
+
+
+
+
+  .medicine-card{
+      /* border: 1px solid; */
+      margin: 10px;
+      /* width: 400px; */
+      /* overflow: auto; */       
+  }
+
+  .active-crousel{
+    /* background: rgba(250, 14, 14, 0.3); */
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+  #frequently-brougth-crousel .medicine-card:hover{
+      transform: scale(1);
+  }
+
+  .medicine-card .img-div{
+      width: 160px;
+      height: 110px;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid rgb(80, 84, 87); 
+      border-radius: 8px;   
+  }
+
+  .img-div img{
+      width: 50%;
+      height: 100%;
+  }
+
+  .title-div{
+    font-size: 18px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* line-height: 1.3; */
+    height: 48px;
+    overflow: hidden;
+    vertical-align: middle;
+    color: rgb(80, 84, 87);
+  }
+
+  .strip-div{
+      font-size: 14px;
+      font-weight: 500;
+      color: rgb(80, 84, 87);
+  }
+
+  .mrp-span{
+      font-size: 14px;
+      color:rgb(80, 84, 87)
+  }
+
+  .off-div{
+    font-size: 14px;
+      color: rgb(80, 84, 87);
+      text-decoration: line-through;
+  }
+
+
+  .price-div{
+      font-size: 18px;
+      color: rgb(80, 84, 87);
+      font-weight: bold;
+  }
+
+  .add-bttn-crousel{
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(16, 132, 126);
+      width: 100px;
+      /* height: 50px; */
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      border: 1px solid rgb(16, 132, 126);
+      border-radius: 8px;
+      margin-left: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+  }

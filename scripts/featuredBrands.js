@@ -1,54 +1,54 @@
 let featured_brand_data = [
     {
-        "image":"./Images/Featured Brands/Dettol.jpg",
+        "image":"../Images/Featured Brands/Dettol.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Horlics.jpg",
+        "image":"../Images/Featured Brands/Horlics.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Viks.jpg",
+        "image":"../Images/Featured Brands/Viks.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Liveeasy.jpg",
+        "image":"../Images/Featured Brands/Liveeasy.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Nivea.jpg",
+        "image":"../Images/Featured Brands/Nivea.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Bournvita.jpg",
+        "image":"../Images/Featured Brands/Bournvita.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Revital.png",
+        "image":"../Images/Featured Brands/Revital.png",
     },
     {
-        "image":"./Images/Featured Brands/Volini.png",
+        "image":"../Images/Featured Brands/Volini.png",
     },
     {
-        "image":"./Images/Featured Brands/Sebamed.png",
+        "image":"../Images/Featured Brands/Sebamed.png",
     },
     {
-        "image":"./Images/Featured Brands/Upkarna.jpg",
+        "image":"../Images/Featured Brands/Upkarna.jpg",
     },
     {
-        "image":"./Images/Featured Brands/EverHerb.jpg",
+        "image":"../Images/Featured Brands/EverHerb.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Teddy.jpg",
+        "image":"../Images/Featured Brands/Teddy.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Unknown.png",
+        "image":"../Images/Featured Brands/Unknown.png",
     },
     {
-        "image":"./Images/Featured Brands/Maxirich.jpg",
+        "image":"../Images/Featured Brands/Maxirich.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Pigeon.jpg",
+        "image":"../Images/Featured Brands/Pigeon.jpg",
     },
     {
-        "image":"./Images/Featured Brands/bella.jpg",
+        "image":"../Images/Featured Brands/bella.jpg",
     },
     {
-        "image":"./Images/Featured Brands/Hansaplast.png",
+        "image":"../Images/Featured Brands/Hansaplast.png",
     }
 
 

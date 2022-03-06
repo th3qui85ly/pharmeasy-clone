@@ -2,9 +2,8 @@
 body{
     margin : 0px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 80%;
 }
-#main{
+#main_shiv{
     display: flex;
     background-color: white;
     height: 520px;
@@ -12,17 +11,17 @@ body{
     /* margin: 20px 70px 0xp 70px; */
 
 }
-#left{
+#left_shiv{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 10%;
     width: 70%;
     letter-spacing: 1.5%;
-    line-height: 180%;
+    line-height: 150%;
     /* background-color: azure; */
 }
-#right{
+#right_shiv{
     margin-left: 0%;
     width: 30%;
 }
@@ -35,32 +34,38 @@ body{
  #c3r2{
     height : 50%;
 }
-.heading{
+.heading_shiv{
     width: 200px;
     margin-top: 10%;
     margin-bottom: 3%;
     font-weight: 700;
+    font-size: 80%;
 }
 .content{
     margin: 2%;
     margin-left: 0;
+    font-size: 80%;
 }
-svg{
+#svg_shiv{
     color: #10847e;
     margin-right: 3%;
     height:33px;
     width:auto;
 }
 .follow{
-font-size: 110%;
+font-size: 80%;
+margin-top: 8%;
 }
 #payment_partners{
     display:flex;
     margin: 2px;
+    margin-top: 20px;
     margin-left: 10%;
-    margin-top: 12px;
+
+    margin-top: 100px;
+
 }
-#image{
+#image_shiv{
 margin-top: 0px;
 /* background-color: rgb(168, 82, 82); */
 height: 100px;
@@ -93,4 +98,3 @@ div > #mobi{
     height: 30px;
     padding-top: 9%;
 }
-/* @media (min-width : ) */

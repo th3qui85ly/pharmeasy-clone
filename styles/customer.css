@@ -75,12 +75,12 @@
 
 #carousal-div-customer .customer-card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 0 0 auto;
     object-fit: cover;
     /* margin-right: 20px; */
     height: max-content;
-    width: fit-content;
+    width: 350px;
     /* max-width: 100%; */
     /* padding: 20px; */
     /* border: 1px solid rgb(255, 0, 0); */
@@ -89,11 +89,36 @@
     transform: scale(0.95);
     transition: all 0.8s;
     /* padding-left: 0; */
-    /* margin-left: 5px ; */
-
-
-    
+    /* margin-left: 5px ; */    
+    padding: 13px;
 }
+
+#carousal-div-customer .customer-card .customer-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(95, 95, 95);
+}
+
+
+#carousal-div-customer .customer-card .customer-date{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+}
+ .customer-card .code{
+     margin-top: 20px;
+     margin-left: 20px;
+     background-color: #f2fff8;
+     padding: 20px;
+ }
+.code img{
+    width: 20px;
+}
+.customer-msg{
+    margin-top: 18px;
+    font-size: 14px;
+}
+
 
 
 #carousal-div-customer .customer-card:hover{

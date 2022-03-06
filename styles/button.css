@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
-#container{
+#container_shiv{
     padding-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
 }
-#btn{
+#btn_shiv{
     display: flex;
     height: 90px ;
     margin-top : 0px;
     background-color: #A291FA;
     border-radius: 5px;
 }
-#first{
+#first_shiv{
     display: flex;
     align-items: center;
 }
-#first_div_image {
+#first_div_image_shiv {
     height: 40px;
     flex-grow: 1;
     margin-left: 30px;
     justify-content: center;
 }
-#middle{
+#middle_shiv{
     flex-grow: 2;
     font-size: 170%;
     text-align: left;
@@ -33,14 +33,14 @@
     letter-spacing: 0px;
     word-spacing: 0.5px;
 }
-#third{
+#third_shiv{
     box-sizing: border-box;
     vertical-align: baseline;
     align-self: end;
     padding-right: 10px;
     margin-left: 20px;
 }
-#third_div_image{
+#third_div_image_shiv{
     height: 130px;
     flex-grow: 1;
     vertical-align: bottom;
