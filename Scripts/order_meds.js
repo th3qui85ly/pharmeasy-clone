@@ -1,3 +1,5 @@
+
+
 async function get_data(){
     let search_bar = document.getElementById("results_div");
     search_bar.textContent = ""
@@ -18,7 +20,7 @@ function display_data(data){
     data.forEach(ele => {
         let search_result_div = document.createElement("a");
         search_result_div.innerText = ele;
-        search_result_div.setAttribute('href',"./AddtoCart.html");
+        search_result_div.setAttribute('href',"../cart.html");
         search_result_div.addEventListener("click" , function(){
             set_local_storage(ele)
         })
@@ -51,13 +53,13 @@ function set_local_storage(name){
     let img4="https://media.istockphoto.com/photos/hydrocodone-is-an-analgesic-prescribed-as-potent-pain-medication-picture-id932555698?b=1&k=20&m=932555698&s=170667a&w=0&h=llH6tP5ZKopVW4YYCqQYI7rH-wHztEsQXxJ6vFu4Fyk="
     let img5 = "https://media.istockphoto.com/photos/paracetamol-pain-and-fever-medication-box-picture-id1199617301?b=1&k=20&m=1199617301&s=170667a&w=0&h=eZmHCesEjoGtTYC-BSLQ0lQQPOo7RITekYIHit6tJfI="
     let img6 = "https://media.istockphoto.com/photos/generic-paracetamol-tablets-picture-id1181471590?b=1&k=20&m=1181471590&s=170667a&w=0&h=jx6AFvbY8DRjtG3k7yfK-t00CRDJzWNsOPa180mV0wU=";
-    
+
     let MRP = Math.floor((Math.random() * 100));
     let price = MRP - 5;
     med_names.push({name , img1 , img2 , img3, img4, img5, img6 , MRP , price} );
-    localStorage.setItem("med_names" , JSON.stringify(med_names));
+    localStorage.setItem("name_arr" , JSON.stringify(med_names));
 
 }
 
-var k = JSON.parse(localStorage.getItem(("med_names")));
+var k = JSON.parse(localStorage.getItem(("name_arr")));
 console.log(k[0].img1)
