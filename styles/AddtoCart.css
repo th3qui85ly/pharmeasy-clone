@@ -4,213 +4,104 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-
-#item-card{
-    display: flex;
-    border: 1px solid rgb(185, 183, 183) ;
-    min-width: 100%;
-     max-width: 100%;
-     padding: 10px;
-     padding-right: 10px;
-     border-radius: 8px;
-     margin-bottom: 10px;
-}
-
-#cart-main-container{
+#online-medicine-container{
     width: 60%;
     /* border: 1px solid black; */
     margin: 5% auto;
+}
+ .online-path p{
+     font-size: 13px;
+     color: rgb(104, 104, 104);
+ }
+
+.online-path a{
+    text-decoration: none;
+    color: black;
+}
+
+.images-cart{
     display: flex;
+    margin: 10px;
+    /* height: 300px; */
+}
+.images-cart div{
+    margin-top: 10px;
 }
 
- .cart-count{
-     /* border: 1px solid; */
-     font-size: 28px;
-     font-weight: 800;
-     color: rgb(85, 85, 85);
- }
 
- .cart-items{
+.images{
+    width: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    /* margin: 10px; */
+}
 
-     border: 1px solid rgb(185, 183, 183);
+.cart-links{
+    margin-left: 40.3%;
+    width: 23.4%;
+    position: fixed;
+    /* border: 1px solid black; */
+}
+.actual-images{
+    /* border: 1px solid black; */
+    width: 45%;
 
-     min-width: 90%;
-     max-width: 90%;
-     padding: 10px;
-     border-radius: 8px;
-
-     display: flex;
-     flex-direction: column;
-
-    }
+}
+.main-image{
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 0 30px;
+    /* height: 250px; */
+    /* display: grid; */
     
-    .cart-items div{
-     /* border: 1px solid; */
-     
- }
-
-#medicine-info{
-    margin-left: 10px;
-    color:rgb(75, 74, 74);
 }
-
-#medicine-info div{
-    margin: 10px 0;
-}
-
-.title-medicine-cart{
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.provider-medicine-cart{
-    color: rgb(104, 104, 104);
-    font-size: 16px;
-}
-
-.strip-medicine-cart{
-    color: rgb(79, 88, 94);
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
- /* .delete-img{
-     text-align: right;
- } */
-
- .delete-img img{
-     margin-top: 10px;
-     margin-right: 10px;
- }
-
- #price-action{
-     /* border: 1px solid; */
-     width: 320px;
-     text-align: right;
- }
-
- .price{
-     margin-top: 90px;
-     width: 300px;
- }
-
-.buttons-price{
-    margin-left: 100px;
-    width: 400px;
+.main-image img{
+    width: 100%;
+    padding: 20px 0;
     /* border: 1px solid; */
 }
 
-.button1{
-    width: 94%;
-    border: 1px solid;
-    text-align: left;
-    padding: 10px;
-    border: 2px solid rgb(16, 132, 126);
-    border-radius: 8px;
+.actual-images div{
+    /* margin: 10px; */
+    /* border: 1px solid; */
+     text-align: right;
+}
+
+.other-images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid rgb(21, 255, 0); */
+    gap: 10px;
+    margin: 0;
+    /* text-align: center; */
+    /* place-items: center; */
+    vertical-align: middle;
+}
+.other-images div{
+    vertical-align: middle;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid rgb(149, 149, 149);
+}
+
+.other-images div:hover{
     cursor: pointer;
 }
 
-.button2{
-    background-color: rgb(16, 132, 126);
-    font-size: 18px;
-    width: 93%;
-    font-weight: 800;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;    
-    margin-top: 20px;
+#active-div{
+    border: 1px solid rgb(0, 0, 0);
 }
 
-.button3{
-    margin-top: 20px;
-    display: flex;
-    border: 1px solid;
-    padding: 10px;
-    background-color: #f2fff8;
-    border: 2px dotted rgb(16, 132, 126);
-    /* border: 2px dotted ; */
+.other-images img{
+    vertical-align: middle;
+    width: 100%;
+    /* height: 50%; */
+    overflow: hidden;
 }
-
-.button4{
-    margin: 20px 0;
-}
-
-.button4 hr{
-    border-top: 1px rgb(219, 218, 218) dotted;
-    
-}
-
-.button5{
-
-    margin-top: 20px;
-    display: flex;
-    border: 1px solid;
-    padding: 10px;
-    background-color: #f2fff8;
-    border: 2px dotted rgb(16, 132, 126);
-    cursor: pointer;
-}
-
-.button6{
-    margin-top: 10px;
-    background-color: rgb(133, 115, 225);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.button6 ul  li::before {
-    content: "\2022";
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    /* font-weight: 400; */
-    /* display:inline-block;  */
-    /* line-height: 40px; */
-    width: 1em;
-    /* margin-top: -10px; */
-    /* margin-top: -5em; */
-    margin-left: -1em;  
-    /* margin-right: 5px; */
-    
-  }
-
-
-.button7{
-    margin-top: 20px;
-    background-color: rgb(233, 249, 255);
-    padding: 10px;
-   display: flex;
-}
-
-.order-offers li{
-    font-size: 15px;
-    margin-left: -10px;
-    line-height: 1.8rem;
-}
-
-#cart-price{
-    font-weight: 20px;
-    font-weight: 800;
-    color: rgb(80, 79, 79);
-}
-
-#total-price{
-    font-weight: 20px;
-    font-weight: 800;
-    color: rgb(80, 79, 79);
-}
-
-
-.cart-items{
-    display: flex;
-    margin-top: 10px;
-    /* height: 300px; */
-}
-
-
 .medicine-info{
     margin-left: 20px;
 }
@@ -328,7 +219,7 @@ option:hover{
 }
 .links li::before {
     content: "\2022";
-    color: rgb(255, 255, 255);
+    color: rgb(22, 135, 110);
     font-size: 25px;
     /* font-weight: 400; */
     /* display:inline-block;  */
@@ -380,7 +271,6 @@ option:hover{
   }
 
   #frequently-brougth-crousel{
-      width: 620px;
       display: flex;
       overflow-x: auto;
       transition: all 1.15s;
@@ -412,7 +302,7 @@ option:hover{
   }
 
   .medicine-card .img-div{
-      width: 140px;
+      width: 160px;
       height: 110px;
       text-align: center;
       padding: 10px;
