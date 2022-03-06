@@ -185,9 +185,10 @@ let slider = document.getElementById("frequently-brougth-crousel");
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
 
 
-        let image = document.getElementById("image");
+        let image = document.getElementById("image_in_div");
         image.src = "";
         image.src = "https://media.istockphoto.com/photos/packet-of-generic-paracetamol-tablets-picture-id1022216070?s=612x612"
+        console.log(image.src);
 
         let   title = document.querySelector(".title-medicine-cart");
         title.textContent = details[0].name; 
