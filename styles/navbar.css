@@ -50,7 +50,7 @@ body {
   height: 95%;
   width: 100px;
   color: #37857e;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 1px solid #fff;
@@ -123,4 +123,8 @@ body {
 }
 .tab2:hover {
   text-decoration: underline;
+}
+a{
+  text-decoration: none;
+  color: white;
 }
