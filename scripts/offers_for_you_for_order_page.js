@@ -248,3 +248,5 @@
                 // console.log(walk);  
                 slider.scrollLeft = scrollLeft - walk;              
             });
+
+

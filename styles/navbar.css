@@ -50,7 +50,7 @@ body {
   height: 95%;
   width: 100px;
   color: #37857e;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 1px solid #fff;
