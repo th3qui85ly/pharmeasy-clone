@@ -100,7 +100,7 @@
                     data.forEach((offer) => {
                         let a = document.createElement("a");
                         a.setAttribute("class","order-link");
-                        a.href ="https://www.google.com";
+                        a.href ="";
                         let offer_card = document.createElement("div");
                         offer_card.setAttribute("class", "offer-card");
                         // offer_card.setAttribute("class","item");

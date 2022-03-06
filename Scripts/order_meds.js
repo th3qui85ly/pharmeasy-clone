@@ -20,7 +20,7 @@ function display_data(data){
     data.forEach(ele => {
         let search_result_div = document.createElement("a");
         search_result_div.innerText = ele;
-        search_result_div.setAttribute('href',"../cart.html");
+        search_result_div.setAttribute('href',"../pages/AddtoCart.html");
         search_result_div.addEventListener("click" , function(){
             set_local_storage(ele)
         })
@@ -57,9 +57,9 @@ function set_local_storage(name){
     let MRP = Math.floor((Math.random() * 100));
     let price = MRP - 5;
     med_names.push({name , img1 , img2 , img3, img4, img5, img6 , MRP , price} );
-    localStorage.setItem("name_arr" , JSON.stringify(med_names));
+    localStorage.setItem("med_names" , JSON.stringify(med_names));
 
 }
 
-var k = JSON.parse(localStorage.getItem(("name_arr")));
+var k = JSON.parse(localStorage.getItem(("med_names")));
 console.log(k[0].img1)
