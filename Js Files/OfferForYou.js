@@ -1,7 +1,7 @@
 
                 let offers_data = [
                     {
-                        "icon": "./Images/Offers For You/Birthday Week.jpg",
+                        "icon": "./images/Offers For You/Birthday Week.jpg",
                         "title": "Flat 25% off + up to Rs.7000 surprise cashback",
                         "code": "BDAYBASH"
                     },

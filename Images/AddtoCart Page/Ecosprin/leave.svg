@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <path id="cr7dwpylpa" d="M0 0.027L19.023 0.027 19.023 16.456 0 16.456z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g fill="#F4F7FB" transform="translate(-156 -710) translate(156 710)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+                <g>
+                    <g transform="translate(-156 -710) translate(156 710) translate(5.455 6.818) translate(0 .013)">
+                        <mask id="i9fbmykzrb" fill="#fff">
+                            <use xlink:href="#cr7dwpylpa"/>
+                        </mask>
+                        <path fill="#3CCEA5" d="M18.99.294c-.066-.161-.224-.267-.399-.267C1.816.027 0 6.981 0 9.971c0 3.879 2.954 6.485 7.35 6.485 5.552 0 6.715-5.283 7.34-8.122.606-2.89 2.073-5.528 4.206-7.57.124-.123.161-.308.094-.47" mask="url(#i9fbmykzrb)"/>
+                    </g>
+                    <path fill="#1BB388" stroke="#1BB388" stroke-width=".682" d="M.432 19.064c-.238 0-.432-.194-.432-.433 0-2.57 4.458-10.819 11.485-14.224.215-.104.473-.014.578.2.104.216.014.474-.201.578C4.765 8.625.865 16.611.865 18.632c0 .238-.194.432-.433.432" transform="translate(-156 -710) translate(156 710) translate(5.455 6.818)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
