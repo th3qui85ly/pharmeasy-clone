@@ -177,10 +177,12 @@ let slider = document.getElementById("frequently-brougth-crousel");
 
 
     fetchingFromStorage();
+    let sum_items;
+    let cart_count = document.querySelector(".cart-count");
     function fetchingFromStorage(){
 
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
-        let cart_count = document.querySelector(".cart-count");
+        
         
 
         let container = document.querySelector(".cart-items");
@@ -249,15 +251,18 @@ let slider = document.getElementById("frequently-brougth-crousel");
 
         let cart_price = document.getElementById("cart-price");
         let sum_price = 0;
-        let sum_items = 0;
+        // let sum_items = 0;
         medicine_storage.forEach((data)=>{
             sum_price += data.price;
             sum_items += data.cart_m;
         })
+// 
+        // cart_count.textContent = sum_items+"Items in Cart";
+
 
         cart_count.textContent = sum_items +" Item(s) in Cart";
+        
         cart_price.textContent = "₹ "+((sum_price-1)*medicine_storage[0].cart_m);
-
         let total_price = document.getElementById("total-price");
         total_price.textContent =  "₹ "+ ((sum_price-1)*medicine_storage[0].cart_m);
 
@@ -274,3 +279,5 @@ let slider = document.getElementById("frequently-brougth-crousel");
 
         
     }
+
+    
