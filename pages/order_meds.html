@@ -27,9 +27,11 @@
                             <option value="pune">Pune</option>
                             <option value="mumbai">Mumbai</option>
                         </select>
-                        <input class="search_input" type="text" placeholder="Search Medicines Healthcare Products" />
-                        <button id="order_search_btn">&#128269;</button>
+                        <input id="search_input_shiv" class="search_input" type="text" placeholder="Search Medicines Healthcare Products" oninput="debounce(get_data , 400)"/>
+                        <!-- <select name="" id="search_input_shiv" class="search_input"></select> -->
+                        <button id="order_search_btn" onclick="debounce(get_data , 400)">&#128269;</button>
                     </div>
+                    <div id="results_div"></div>
                 </div>
             </div>
         </div>
@@ -299,3 +301,4 @@
 </html>
 <script src="../scripts/offers_for_you_for_order_page.js"> </script>
 <script src="../scripts/faq.js"></script>
+<script src="../scripts/order_meds.js"></script>

@@ -124,3 +124,7 @@ body {
 .tab2:hover {
   text-decoration: underline;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
