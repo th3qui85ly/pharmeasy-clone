@@ -1,0 +1,37 @@
+#container{
+    width: 81%;
+    height: 900px;
+    margin: auto;
+    /* border: 1px solid gainsboro; */
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    background-color: #fff;
+  
+}
+
+.childhead{
+   
+   margin-bottom: 20px;
+   font-size: 18px;
+   font:bolder;
+   font-weight: 700;
+  color: #4f585e;
+  background-color: #fff;
+   
+}
+
+.subchild{
+    color: #8897a2;
+    /* margin-bottom: 5px; */
+    vertical-align: baseline;
+}
+
+div li{
+    color: #8897a2;
+}
+
+div a{
+    color: #10847e;
+}
+

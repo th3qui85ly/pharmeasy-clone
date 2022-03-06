@@ -4,7 +4,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: 80%;
 }
-#main{
+#main_shiv{
     display: flex;
     background-color: white;
     height: 520px;
@@ -12,7 +12,7 @@ body{
     /* margin: 20px 70px 0xp 70px; */
 
 }
-#left{
+#left_shiv{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@ body{
     line-height: 180%;
     /* background-color: azure; */
 }
-#right{
+#right_shiv{
     margin-left: 0%;
     width: 30%;
 }
@@ -35,7 +35,7 @@ body{
  #c3r2{
     height : 50%;
 }
-.heading{
+.heading_shiv{
     width: 200px;
     margin-top: 10%;
     margin-bottom: 3%;
@@ -60,7 +60,7 @@ font-size: 110%;
     margin-left: 10%;
     margin-top: 12px;
 }
-#image{
+#image_shiv{
 margin-top: 0px;
 /* background-color: rgb(168, 82, 82); */
 height: 100px;
