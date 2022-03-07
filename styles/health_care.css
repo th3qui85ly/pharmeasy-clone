@@ -199,3 +199,10 @@ ul {
       display: grid;
       place-items: center;
   }
+
+
+  .flickity-prev-next-button{
+      top:0;
+      width: 0;
+      height: 0;
+  }
