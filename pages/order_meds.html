@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/offersJustForYou.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/sideDrawer.css">
 
     <!-- <link rel="stylesheet" href="../styles/home.css"> -->
 </head>
@@ -18,12 +19,39 @@
 
 <body>
 
+   <!-- Side drawer -->
+   <div class="side-drawer">
+    <div class="drawerbar" id="drawerID">
+      <button type="button" onclick="myDrawer(this)" class="toggle-collapse" id="toggle-button">
+        <span class="toggle-icon"><br />X</span>
+      </button>
+      <div class="site-div">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" />
+      </div>
+      <h3 class="drawer-link">Quick Login</h3>
+      <div class="drawer-item">
+        <ul>
+          <li><input type="email" id="login-email"  class="drawer-link" placeholder="Enter your email" required/></li>
+          <li><input type="password" id="login-password" class="drawer-link" placeholder="Enter your password" required/></li>
+        </ul>
+        
+      </div>
+      <button type="button" onclick="loginUser()" id="continue-btn">Login</button>
+      <h6>
+        By clicking continue, you agree with our
+        <a href="#">Privacy Policy</a> <br>
+      </h6>
+      <h5>Don't have an account?</h5>
+      <button type="button" id="continue-btn" onclick="registerHere()">Register Here</button>
+    </div>
+  </div>
+  <!-- End of Side drawer -->
 
   <header id="nav-head">
     <div class="navbar">
       <div class="navbar-top">
         <div class="navbar-logo">
-          <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="Pharmeasy logo" />
+          <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="Pharmeasy logo" href="../my_test_file.html"/>
         </div>
         <div class="navbar-search">
         </div>
@@ -37,15 +65,15 @@
         <div class="navbar-tab">
           <div id="tab-nav">
             <button class="tab1"><a href="./order_meds.html">Order Medicines</a></button>
-            <button class="tab1">Healthcare Products</button>
-            <button class="tab1">Diagonstic Tests</button>
+            <button class="tab1"><a href="./healthcare.html"></a>Healthcare Products</a></button>
+            <button class="tab1">Lab Tests</button>
           </div>
         </div>
         <div class="navbar-button">
           <div id="btn-nav">
             <button class="tab2">Offers</button>
-            <button class="tab2">Login/ Signup</button>
-            <button class="tab2">Cart</button>
+            <button class="tab2" id="user-btn" onclick="openDrawer()">Login/ Signup</button>
+            <button class="tab2"><a href="./cart.html">Cart</a></button>
           </div>
         </div>
       </div>
@@ -350,6 +378,7 @@
 <script src="../scripts/offers_for_you_for_order_page.js"> </script>
 <script src="../scripts/faq.js"></script>
 <script src="../scripts/order_meds.js"></script>
+<script src="../scripts/drawer.js"></script>
 
 <!-- <script src="../scripts/main.js"></script> -->
 

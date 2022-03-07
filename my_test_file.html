@@ -7,16 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
   <link rel="stylesheet" href="./styles/navbar.css" />
-  <link rel="stylesheet" href="./styles/home.css" />
+  <link rel="stylesheet" href="./styles/main_button.css" />
   <link rel="stylesheet" href="./styles/footer.css" />
   <link rel="stylesheet" href="./styles/button.css" />
   <link rel="stylesheet" href="./styles/offersJustForYou.css">
   <link rel="stylesheet" href="./styles/featured_brands.css">
   <link rel="stylesheet" href="./styles/health_articles.css">
   <link rel="stylesheet" href="./styles/customer.css">
+  <link rel="stylesheet" href="./styles/sideDrawer.css">
+  <link rel="stylesheet" href="./styles/slider.css">
 </head>
 
 <body>
+
+   <!-- Side drawer -->
+   <div class="side-drawer">
+    <div class="drawerbar" id="drawerID">
+      <button type="button" onclick="myDrawer(this)" class="toggle-collapse" id="toggle-button">
+        <span class="toggle-icon"><br />X</span>
+      </button>
+      <div class="site-div">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" />
+      </div>
+      <h3 class="drawer-link">Quick Login</h3>
+      <div class="drawer-item">
+        <ul>
+          <li><input type="email" id="login-email"  class="drawer-link" placeholder="Enter your email" required/></li>
+          <li><input type="password" id="login-password" class="drawer-link" placeholder="Enter your password" required/></li>
+        </ul>
+        
+      </div>
+      <button type="button" onclick="loginUser()" id="continue-btn">Login</button>
+      <h6>
+        By clicking continue, you agree with our
+        <a href="#">Privacy Policy</a> <br>
+      </h6>
+      <h5>Don't have an account?</h5>
+      <button type="button" id="continue-btn" onclick="registerHere()">Register Here</button>
+    </div>
+  </div>
+  <!-- End of Side drawer -->
+
+
   <header id="nav-head">
     <div class="navbar">
       <div class="navbar-top">
@@ -47,14 +79,15 @@
         <div class="navbar-tab">
           <div id="tab-nav">
             <button class="tab1"><a href="./pages/order_meds.html">Order Medicines</a></button>
-            <button class="tab1">Healthcare Products</button>
-            <button class="tab1">Diagonstic Tests</button>
+            <button class="tab1"><a href="./pages/healthcare.html">Healthcare Products</a></button>
+            <button class="tab1">Lab Tests</button>
+            <button class="tab1">RTPCR</button>
           </div>
         </div>
         <div class="navbar-button">
           <div id="btn-nav">
             <button class="tab2">Offers</button>
-            <button class="tab2">Login/ Signup</button>
+            <button class="tab2" id="user-btn" onclick="openDrawer()">Login/ Signup</button>
             <button class="tab2">Cart</button>
           </div>
         </div>
@@ -62,54 +95,85 @@
     </div>
   </header>
 
-  <div class="ss-container">
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/87bb46bee08-PMEY20DWEB.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/b54f4e1b5c6-otc_sale_ends_hp_dweb.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/25b29fcaa01-DWEBSUPR20.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/9e172a2bf75-prioritydweb.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/99b110cdccb-PHEA20.jpg?dim=1440x0&dpr=1&q=100" class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/ec027bde5da-diabetic_slipper_Dweb.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img
-        src="https://cms-contents.pharmeasy.in/banner/8fe18b32048-Advanced_Full_Body_Checkup_Dweb_NEWtwo.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-    <div class="mySlides fade">
-      <img src="https://cms-contents.pharmeasy.in/banner/1b19d5cef0f-GoCoronaGoWeb.jpg?dim=1440x0&dpr=1&q=100"
-        class="pics" />
-    </div>
-
-    <a class="prev" class="material-icons" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" class="material-icons" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="dots">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-    </div>
+  <!-- slidebar -->
+<div class="ss-container">
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/87bb46bee08-PMEY20DWEB.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
   </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/b54f4e1b5c6-otc_sale_ends_hp_dweb.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/25b29fcaa01-DWEBSUPR20.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/9e172a2bf75-prioritydweb.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/99b110cdccb-PHEA20.jpg?dim=1440x0&dpr=1&q=100" class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/ec027bde5da-diabetic_slipper_Dweb.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img
+      src="https://cms-contents.pharmeasy.in/banner/8fe18b32048-Advanced_Full_Body_Checkup_Dweb_NEWtwo.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+  <div class="mySlides fade">
+    <img src="https://cms-contents.pharmeasy.in/banner/1b19d5cef0f-GoCoronaGoWeb.jpg?dim=1440x0&dpr=1&q=100"
+      class="pics" />
+  </div>
+
+
+  <a class="prev" class="material-icons" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" class="material-icons" onclick="plusSlides(1)">&#10095;</a>
+
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+  </div>
+</div>
+
+  <!-- buttons-->
+  <div class="main">
+    <div class="b">
+        
+        <div class="combine">
+        <div class="discount"> FLAT<!-- --> <span class="cut">15%</span> <!-- -->18<!-- -->% OFF </div>
+             <div class="maincontent"> <b>Order Medicines</b></div>
+       </div>
+            <button class="btn">Order Now</button>
+    </div>
+
+    <div class="b b2" >
+        <div class="combine combine2">
+            <div class="discount"> UPTO 60% OFF </div>
+                 <div class="maincontent"> <b>Healthcare Products</b></div>
+           </div>
+                <button class="btn btn2" >Order Now</button>
+
+    </div>
+    <div class="b b3" >
+        <div class="combine combine3" >
+            <div class="discount"> UPTO 70% OFF </div>
+                 <div class="maincontent"> <b>Lab Tests</b></div>
+           </div>
+                <button class="btn btn3">Book Now</button>
+    </div>
+</div>
 
   <div id="container_shiv" role="button">
     <div id="btn_shiv">
@@ -425,5 +489,6 @@
 <script src="./scripts/featuredBrands.js"> </script>
 <script src="./scripts/healthArticles.js"> </script>
 <script src="./scripts/Customer.js"> </script>
+<script src="./scripts/drawer.js"> </script>
 
 </html>
