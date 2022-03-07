@@ -137,49 +137,49 @@ let frequent_data = [
             "name" : "Supradyn Daily Multivitamin Tablets 15s",
             "tablets": "15 Tablet(s) in Strip",
             "mrp" : "50",
-            "price": "₹47.5"
+            "price": "47.5"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/02.webp",
             "name" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
             "tablets": "20 Tablet(s) in Strip",
             "mrp" : "399",
-            "price": "₹199.5"
+            "price": "199.5"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/03.webp",
             "name" : "Evion 400mg Strip Of 10 Capsules",
             "tablets": "6 Tablet(s) in Strip",
             "mrp" : "32.7",
-            "price": "₹28.78"
+            "price": "28.78"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/04.webp",
             "name" : "Neurobion Forte Tablet 30'S",
             "tablets": "09 Tablet(s) in Strip",
             "mrp" : "34.7",
-            "price": "₹30.19"
+            "price": "30.19"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/05.webp",
             "name" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
             "tablets": "18 Tablet(s) in Strip",
             "mrp" : "415",
-            "price": "₹385.95"
+            "price": "385.95"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/06.webp",
             "name" : "Cremaffin Fresh Tablets Strip Of 10",
             "tablets": "10 Tablet(s) in Strip",
-            "mrp" : "₹10.87",
-            "price": "₹8.91"
+            "mrp" : "10.87",
+            "price": "8.91"
         },
         {
             "img" : "../Images/AddtoCart Page/Crousel Image/07.webp",
             "name" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
             "tablets": "12 Tablet(s) in Strip",
-            "mrp" : "₹849",
-            "price": "₹466.95"
+            "mrp" : "849",
+            "price": "466.95"
         }
 
 ];
@@ -277,7 +277,7 @@ function carousel(data){
 
         let price_div = document.createElement("div");
         price_div.setAttribute("class","price-div");
-        price_div.textContent = medicine.price;
+        price_div.textContent = "₹ "+ medicine.price;
 
         let add_bttn = document.createElement("button");
         add_bttn.setAttribute("class","add-bttn-crousel");

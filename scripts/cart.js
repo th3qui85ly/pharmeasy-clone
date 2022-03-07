@@ -316,9 +316,9 @@ let slider = document.getElementById("frequently-brougth-crousel");
         cart_count.textContent = sum_items +" Item(s) in Cart";
         
         let cart_price = document.getElementById("cart-price");
-        cart_price.textContent = "₹ "+(sum_price);
+        cart_price.textContent = "₹ "+(sum_price).toFixed(2);
         let total_price = document.getElementById("total-price");
-        total_price.textContent =  "₹ "+ (sum_price);
+        total_price.textContent =  "₹ "+ (sum_price).toFixed(2);
 
 
 
