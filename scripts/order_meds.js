@@ -20,7 +20,7 @@ function display_data(data){
     data.forEach(ele => {
         let search_result_div = document.createElement("a");
         search_result_div.innerText = ele;
-        search_result_div.setAttribute('href',"../cart.html");
+        search_result_div.setAttribute('href',"./Cart.html");
         search_result_div.addEventListener("click" , function(){
             set_local_storage(ele)
         })
