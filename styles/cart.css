@@ -4,17 +4,17 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-
-#item-card{
+.item-card{
     display: flex;
-    border: 1px solid rgb(185, 183, 183) ;
-    min-width: 100%;
-     max-width: 100%;
-     padding: 10px;
-     padding-right: 10px;
-     border-radius: 8px;
-     margin-bottom: 10px;
+    max-width: 600px;
+    min-width: 600px;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
 }
+
+
 
 #cart-main-container{
     width: 60%;
@@ -31,23 +31,16 @@ font-family: 'Open Sans', sans-serif;
  }
 
  .cart-items{
-
-     border: 1px solid rgb(185, 183, 183);
-
-     min-width: 90%;
-     max-width: 90%;
+     /* border: 1px solid rgb(185, 183, 183); */
+     min-width: 100%;
+     max-width: 100%;
      padding: 10px;
      border-radius: 8px;
-
      display: flex;
      flex-direction: column;
-
     }
     
-    .cart-items div{
-     /* border: 1px solid; */
-     
- }
+
 
 #medicine-info{
     margin-left: 10px;
@@ -59,7 +52,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .title-medicine-cart{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
 }
 
@@ -85,7 +78,7 @@ font-family: 'Open Sans', sans-serif;
  }
 
  #price-action{
-     /* border: 1px solid; */
+    
      width: 320px;
      text-align: right;
  }
@@ -93,6 +86,8 @@ font-family: 'Open Sans', sans-serif;
  .price{
      margin-top: 90px;
      width: 300px;
+     
+     padding: 10px;
  }
 
 .buttons-price{

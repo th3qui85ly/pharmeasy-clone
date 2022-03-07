@@ -2,11 +2,35 @@
 let m_img = document.getElementById("m-image");
 let bttndiv = document.getElementById("button-div");
 let addtoCartBttn = document.getElementById("AddtoCartButton");
-
+let random_img = `../Images/AddtoCart Page/cart/0${Math.floor(Math.random() * 10)}.jpg`;
 let med_names = JSON.parse(localStorage.getItem("med_names"));
 
+let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+if(medicine_storage == null)
+{
+    localStorage.setItem("medicine_storage",JSON.stringify([]));
+}
+
+
+
+let cart_msg = document.querySelector(".cart-msg");
+    if(medicine_storage.length > 0){
+        let cart = document.querySelector(".inactive-button");
+        cart.setAttribute("class","view-cart");
+
+        cart.addEventListener("click",()=>{
+            location.href = "./Cart.html";
+        });
+        let sum_items = 0;
+        medicine_storage.forEach((data)=>{
+        sum_items += parseInt(data.cart_m);    
+        });
+        cart_msg.textContent = sum_items+ " Item(s) in Cart";
+        console.log(medicine_storage.length);
+    }
+
 let all_img = document.querySelectorAll(".other-images");
-// console.log(all_img[0].children);
+console.log(all_img[0].children);
 let ele = all_img[0].children;
 
 for(let i = 0; i < ele.length; i++)
@@ -45,33 +69,58 @@ function addquantity(e){
     let select = document.querySelector("select");
     let cart = document.querySelector(".inactive-button");
     
-    let cart_msg = document.querySelector(".cart-msg");
+    
     console.log(cart_msg);
     select.onchange = function(){
-        cart.setAttribute("class","view-cart");
+    
+        let cart;
         cart_msg.textContent = "";
-        cart_msg.textContent = select.value + " Item(s) in Cart";    
-
-        let name = med_names[0].name;
-        let img = med_names[0].img1;
-        let price = med_names[0].price;
-        let mrp = med_names[0].MRP;
-        let cart_m = select.value;
 
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
-        // let med_names = JSON.parse(localStorage.getItem("med_names"));
-        // console.log(med_names);
-
         if(medicine_storage == null)
         {
             localStorage.setItem("medicine_storage",JSON.stringify([]));
         }
 
-        medicine_storage.push({name,img,price,mrp,cart_m});
+       
 
-        console.log(medicine_storage);
-        med_names[0].cart = select.value;
-        localStorage.setItem("med_names",JSON.stringify(med_names))
+
+        if(medicine_storage.length > 0){
+            let sum_items = 0;
+            medicine_storage.forEach((data)=>{
+            sum_items += parseInt(data.cart_m);    
+            });
+            cart_msg.textContent = sum_items + " Item(s) in Cart"; 
+            cart = document.querySelector(".view-cart");
+        }
+        else{
+            cart_msg.textContent = select.value + " Item(s) in Cart";
+             cart = document.querySelector(".inactive-button");
+             cart.setAttribute("class","view-cart");
+            }
+            cart = document.querySelector(".view-cart");
+            
+            let name = med_names[0].name;
+            let img = random_img;
+            let price = med_names[0].price;
+            let mrp = med_names[0].MRP;
+            let cart_m = select.value;
+    
+            
+            // let med_names = JSON.parse(localStorage.getItem("med_names"));
+            // console.log(med_names);
+            // let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+            // if(medicine_storage == null)
+            // {
+            //     localStorage.setItem("medicine_storage",JSON.stringify([]));
+            // }
+    
+            medicine_storage.push({name,img,price,mrp,cart_m});
+    
+            console.log(medicine_storage);
+            med_names[0].cart = select.value;
+            localStorage.setItem("med_names",JSON.stringify(med_names))
+        
         cart.addEventListener("click",()=>{
             location.href = "./Cart.html";
         });
@@ -136,7 +185,7 @@ let frequent_data = [
 ];
 
 
-let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+// let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
 // let med_names = JSON.parse(localStorage.getItem("med_names"));
 // console.log(med_names);
 
@@ -155,10 +204,10 @@ let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
             let home_medicine = document.getElementById("home-name-medicine");
             home_medicine.textContent = med_names[0].name;
             let main_image = document.getElementById("m-image");
-            main_image.src = med_names[0].img1;
+            main_image.src = random_img;
 
             let img1 = document.getElementById("01");
-            img1.src = `../Images/AddtoCart Page/Ecosprin/0${Math.floor(Math.random() * 10)}.webp`;
+            img1.src = random_img;
             let img2 = document.getElementById("02");
             img2.src = med_names[0].img2;
             let img3 = document.getElementById("03");
