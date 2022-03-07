@@ -125,7 +125,7 @@ function addquantity(e){
             location.href = "./Cart.html";
         });
         localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
-
+        // location.reload();
         
     }
 }
@@ -133,53 +133,53 @@ function addquantity(e){
 
 let frequent_data = [
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/01.webp",
-            "title" : "Supradyn Daily Multivitamin Tablets 15s",
+            "img" : "../Images/AddtoCart Page/Crousel Image/01.webp",
+            "name" : "Supradyn Daily Multivitamin Tablets 15s",
             "tablets": "15 Tablet(s) in Strip",
             "mrp" : "50",
-            "price": "₹47.5"
+            "price": "47.5"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/02.webp",
-            "title" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
+            "img" : "../Images/AddtoCart Page/Crousel Image/02.webp",
+            "name" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
             "tablets": "20 Tablet(s) in Strip",
             "mrp" : "399",
-            "price": "₹199.5"
+            "price": "199.5"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/03.webp",
-            "title" : "Evion 400mg Strip Of 10 Capsules",
+            "img" : "../Images/AddtoCart Page/Crousel Image/03.webp",
+            "name" : "Evion 400mg Strip Of 10 Capsules",
             "tablets": "6 Tablet(s) in Strip",
             "mrp" : "32.7",
-            "price": "₹28.78"
+            "price": "28.78"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/04.webp",
-            "title" : "Neurobion Forte Tablet 30'S",
+            "img" : "../Images/AddtoCart Page/Crousel Image/04.webp",
+            "name" : "Neurobion Forte Tablet 30'S",
             "tablets": "09 Tablet(s) in Strip",
             "mrp" : "34.7",
-            "price": "₹30.19"
+            "price": "30.19"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/05.webp",
-            "title" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
+            "img" : "../Images/AddtoCart Page/Crousel Image/05.webp",
+            "name" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
             "tablets": "18 Tablet(s) in Strip",
             "mrp" : "415",
-            "price": "₹385.95"
+            "price": "385.95"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/06.webp",
-            "title" : "Cremaffin Fresh Tablets Strip Of 10",
+            "img" : "../Images/AddtoCart Page/Crousel Image/06.webp",
+            "name" : "Cremaffin Fresh Tablets Strip Of 10",
             "tablets": "10 Tablet(s) in Strip",
-            "mrp" : "₹10.87",
-            "price": "₹8.91"
+            "mrp" : "10.87",
+            "price": "8.91"
         },
         {
-            "image" : "../Images/AddtoCart Page/Crousel Image/07.webp",
-            "title" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
+            "img" : "../Images/AddtoCart Page/Crousel Image/07.webp",
+            "name" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
             "tablets": "12 Tablet(s) in Strip",
-            "mrp" : "₹849",
-            "price": "₹466.95"
+            "mrp" : "849",
+            "price": "466.95"
         }
 
 ];
@@ -230,12 +230,6 @@ let frequent_data = [
 
             let price = document.getElementById("mrp-addToCart");
             price.textContent = "₹ "+med_names[0].price;
- 
-
-
-
-
-
         }
 
 
@@ -262,12 +256,12 @@ function carousel(data){
         img_div.setAttribute("class","img-div");
         
         let img = document.createElement("img");
-        img.src = medicine.image;
+        img.src = medicine.img;
         img_div.append(img);
 
         let title_div = document.createElement('div');
         title_div.setAttribute("class","title-div");
-        title_div.textContent = medicine.title;
+        title_div.textContent = medicine.name;
 
         let strip_div = document.createElement('div');
         strip_div.setAttribute("class","strip-div");
@@ -283,7 +277,7 @@ function carousel(data){
 
         let price_div = document.createElement("div");
         price_div.setAttribute("class","price-div");
-        price_div.textContent = medicine.price;
+        price_div.textContent = "₹ "+ medicine.price;
 
         let add_bttn = document.createElement("button");
         add_bttn.setAttribute("class","add-bttn-crousel");
@@ -343,7 +337,12 @@ function carousel(data){
         // addtoLocal(data);
 
         function addtoLocal(data){
-            console.log(data);
+
+            let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+            data.cart_m = 1;
+            medicine_storage.push(data);
+            localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
+            location.reload();
         
         }
         

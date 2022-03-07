@@ -170,7 +170,7 @@ let slider = document.getElementById("frequently-brougth-crousel");
         function showData(){
             let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
             let container = document.querySelector(".cart-items");
-
+            let n = medicine_storage.length-1;
             let item = medicine_storage[medicine_storage.length - 1];
             let item_card = document.createElement("div");
             item_card.setAttribute("class","item-card");
@@ -194,7 +194,7 @@ let slider = document.getElementById("frequently-brougth-crousel");
                 
             </div>
             <div id="price-action">
-                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
+                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img onclick="localStorageRemove(${n})" class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
                 <div class="price">
                    <span style="font-size: 13px; font-weight: 500;  color: rgb(230, 66, 66);">18% OFF <span style="text-decoration: line-through; color: rgb(79, 88, 94);" class="price-mrp">₹ ${item.mrp} </span> </span> <br>
                     <span style="font-size: 18px; font-weight: bold; color: rgb(79, 88, 94);" class="price-price">₹ ${item.price}*</span>
@@ -203,16 +203,18 @@ let slider = document.getElementById("frequently-brougth-crousel");
             `
 
             container.append(item_card);
-
+            
             let delete_buttons = document.querySelectorAll(".delete-button");
             for(let i = 0 ; i< delete_buttons.length; i++){
                 let button = delete_buttons[i];
-                button.style.cursor = "pointer";
-                let ele = i + 1;
-                button.addEventListener("click",(e)=>{
-                    localStorageRemove(ele - 1);
-                    location.reload();
-                })
+                button.style.cursor = "pointer";    
+               
+                // button.addEventListener("click",(e)=>{
+                //     console.log(i);
+                //     localStorageRemove(i);
+                //     location.reload();              
+                   
+                // })
             }
 
             let cart_count = document.querySelector(".cart-count-original");
@@ -233,21 +235,22 @@ let slider = document.getElementById("frequently-brougth-crousel");
         total_price.textContent =  "₹ "+ (sum_price);
 
         } 
+
     }
 
 
 
     fetchingFromStorage();  
     function fetchingFromStorage(){
+        console.log("Hello");
+        let n = 0;
 
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
         
         
 
         let container = document.querySelector(".cart-items");
-        medicine_storage.forEach((item)=>{
-            // let cart_count = item.car_m;
-            // console.log(cart_count);
+        medicine_storage.forEach((item)=>{       
             let item_card = document.createElement("div");
             item_card.setAttribute("class","item-card");
             item_card.innerHTML = `
@@ -270,44 +273,36 @@ let slider = document.getElementById("frequently-brougth-crousel");
                 
             </div>
             <div id="price-action">
-                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
+                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img  onclick="localStorageRemove(${n})" class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
                 <div class="price">
                    <span style="font-size: 13px; font-weight: 500;  color: rgb(230, 66, 66);">18% OFF <span style="text-decoration: line-through; color: rgb(79, 88, 94);" class="price-mrp">₹ ${item.mrp} </span> </span> <br>
                     <span style="font-size: 18px; font-weight: bold; color: rgb(79, 88, 94);" class="price-price">₹ ${item.price}*</span>
                 </div>
-            </div>
-            `
+            </div>`
+
 
             container.append(item_card);
+            n++;
         });
         
     }
 
     let delete_buttons = document.querySelectorAll(".delete-button");
-    for(let i = 0 ; i< delete_buttons.length; i++){
+    for(let i = 0 ; i < delete_buttons.length; i++){
         let button = delete_buttons[i];
-        button.style.cursor = "pointer";
-
-        let ele = i+1;
-        button.addEventListener("click",(e)=>{
-            localStorageRemove(ele);
-            location.reload();
-        })
+        button.style.cursor = "pointer";     
     }
 
-   function localStorageRemove(ele){
-        let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
-        console.log(medicine_storage);
-
+   
+   function localStorageRemove(ele){         
         medicine_storage = medicine_storage.slice(0,ele).concat(medicine_storage.slice(ele+1,medicine_storage.length));
         localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
-        fetchingFromStorage();
-
+        console.log(ele);
+        location.reload()
+         fetchingFromStorage();
     }
-    // console.log(delete_buttons);
+   
 
-
-    // let sum_items;
     let cart_count = document.querySelector(".cart-count-original");
         let sum_price = 0;
         let sum_items = 0;
@@ -321,13 +316,14 @@ let slider = document.getElementById("frequently-brougth-crousel");
         cart_count.textContent = sum_items +" Item(s) in Cart";
         
         let cart_price = document.getElementById("cart-price");
-        cart_price.textContent = "₹ "+(sum_price);
+        cart_price.textContent = "₹ "+(sum_price).toFixed(2);
         let total_price = document.getElementById("total-price");
-        total_price.textContent =  "₹ "+ (sum_price);
-
-
-    
+        total_price.textContent =  "₹ "+ (sum_price).toFixed(2);
 
 
 
 
+let addAddress = document.querySelector(".button2");
+addAddress.onclick = ()=>{
+    location.href = "../home.html";
+}
