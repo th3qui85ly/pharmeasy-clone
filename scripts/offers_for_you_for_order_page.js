@@ -107,7 +107,6 @@
                         let logo_div = document.createElement("div");
                         logo_div.setAttribute("class", "logo-div");
                         let logo = document.createElement("img");
-                        logo.className = "img_sushant_sir";
                         logo.src = offer.icon;
                         logo_div.append(logo);
                         let info = document.createElement("div");
