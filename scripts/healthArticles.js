@@ -1,31 +1,31 @@
 let health_data = [
     {
-        "image": "../Images/Health Articles/01.jpg",
+        "image": "../images/Health Articles/01.jpg",
         "title": "8 Types Of Food That Can Help You Fight Anaemia!",
         "description": "Anaemia happens when the body lacks enough healthy red blood cells. As a result, the blood becomes incapable of carrying an adequate amount of oxygen. Anaemia can be temporary or long term and can range from mild to severe."
     },
     {
-        "image": "../Images/Health Articles/02.png",
+        "image": "../images/Health Articles/02.png",
         "title": "Precautions For Thyroid Patients – Do’s & Dont’s",
         "description": "Did you know- fifteen in every 1000 women suffer from thyroid. Similarly, one in 1000 men has thyroid. While diet monitoring is very important for thyroid patients, they also need to pay attention to many other factors as discussed below."
     },
     {
-        "image": "../Images/Health Articles/03.jpg",
+        "image": "../images/Health Articles/03.jpg",
         "title": "What is National Colorectal Cancer Awareness Month? Why We Need To Pay Attention?",
         "description": "Table of Contents Introduction Causes and Symptoms of Colorectal Cancer Who is at risk What is the cure Will it come back after treatment? Conclusion: Why colorectal cancer needs to be discussed?"
     },
     {
-        "image": "../Images/Health Articles/04.jpg",
+        "image": "../images/Health Articles/04.jpg",
         "title": "Colorectal Cancer Awareness Month-Diet That Can Help You Prevent Colorectal Cancer",
         "description": "Do you find yourself wondering whether your meals are healthy enough? Did you know that certain types of foods can increase inflammation in your gut and make you vulnerable to increased risk of Colorectal Cancer? Which food groups are these – carbohydrates, fats or protein? We’ve got you all the answers in a nifty infographic that simplifies it all. Check it out below and share it with your loved ones."
     },
     {
-        "image": "../Images/Health Articles/05.jpg",
+        "image": "../images/Health Articles/05.jpg",
         "title": "COVID Vaccination During Pregnancy And Its Benefits For The Baby",
         "description": "Table of Contents What do we know about Covid vaccination for pregnant women? The importance of COVID-19 vaccines for pregnant people Does COVID-19 vaccine during pregnancy build immunity in babies? Busting the most common myths regarding the COVID-19 vaccine among people who are pregnant Conclusion:"
     },
     {
-        "image": "../Images/Health Articles/06.jpg",
+        "image": "../images/Health Articles/06.jpg",
         "title": "If I Have COVID For The Second Time, Does It Mean It Will Be Less Severe?",
         "description": "Understanding COVID-19 re-infection A re-infection means getting infected with a disease that you already suffered from once. Reinfection with the COVID-19 virus means a person was previously infected, recovered and got infected again. While it is true that most individuals who recover from COVID-19 will have some protection, reinfections do occur. The reported cases of a re-infection are less. "
     },
