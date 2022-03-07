@@ -1,52 +1,52 @@
 let frequent_data = [
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/01.webp",
-        "title" : "Supradyn Daily Multivitamin Tablets 15s",
+        "img" : "../Images/AddtoCart Page/Crousel Image/01.webp",
+        "name" : "Supradyn Daily Multivitamin Tablets 15s",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "50",
-        "price": "₹47.5"
+        "price": "47.5"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/02.webp",
-        "title" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
+        "img" : "../Images/AddtoCart Page/Crousel Image/02.webp",
+        "name" : "Everherb Karela Jamun Juice - Helps Maintains Healthy Sugar Levels -Helps In Weight Management - 1l",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "399",
-        "price": "₹199.5"
+        "price": "199.5"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/03.webp",
-        "title" : "Evion 400mg Strip Of 10 Capsules",
+        "img" : "../Images/AddtoCart Page/Crousel Image/03.webp",
+        "name" : "Evion 400mg Strip Of 10 Capsules",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "32.7",
-        "price": "₹28.78"
+        "price": "28.78"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/04.webp",
-        "title" : "Neurobion Forte Tablet 30'S",
+        "img" : "../Images/AddtoCart Page/Crousel Image/04.webp",
+        "name" : "Neurobion Forte Tablet 30'S",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "34.7",
-        "price": "₹30.19"
+        "price": "30.19"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/05.webp",
-        "title" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
+        "img" : "../Images/AddtoCart Page/Crousel Image/05.webp",
+        "name" : "Protinex Mama Vanilla Nutrition Drink Tin Of 250 G",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "415",
-        "price": "₹385.95"
+        "price": "385.95"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/06.webp",
-        "title" : "Cremaffin Fresh Tablets Strip Of 10",
+        "img" : "../Images/AddtoCart Page/Crousel Image/06.webp",
+        "name" : "Cremaffin Fresh Tablets Strip Of 10",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "₹10.87",
-        "price": "₹8.91"
+        "price": "8.91"
     },
     {
-        "image" : "../Images/AddtoCart Page/Crousel Image/07.webp",
-        "title" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
+        "img" : "../Images/AddtoCart Page/Crousel Image/07.webp",
+        "name" : "Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
         "tablets": "15 Tablet(s) in Strip",
         "mrp" : "₹849",
-        "price": "₹466.95"
+        "price": "466.95"
     }
 
 ];
@@ -59,22 +59,10 @@ let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
         localStorage.setItem("medicine_storage",JSON.stringify([]));
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
 
-        medicine_storage.push(
-            {
-                "name":"Crosin", 
-                "img": "../Images/AddtoCart Page/Ecosprin/01.webp",
-                "price": "3.50",
-                "mrp" : "4.29"
-            }        
-            );
-
-            localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
     }
 
 
    
-
-        // console.log(medicine_storage);
 
 carousel(frequent_data);
 function carousel(data){
@@ -90,12 +78,12 @@ data.forEach((medicine)=>{
     img_div.setAttribute("class","img-div");
     
     let img = document.createElement("img");
-    img.src = medicine.image;
+    img.src = medicine.img;
     img_div.append(img);
 
     let title_div = document.createElement('div');
     title_div.setAttribute("class","title-div");
-    title_div.textContent = medicine.title;
+    title_div.textContent = medicine.name;
 
     let strip_div = document.createElement('div');
     strip_div.setAttribute("class","strip-div");
@@ -111,13 +99,15 @@ data.forEach((medicine)=>{
 
     let price_div = document.createElement("div");
     price_div.setAttribute("class","price-div");
-    price_div.textContent = medicine.price;
+    price_div.textContent = "₹ "+ medicine.price;
 
     let add_bttn = document.createElement("button");
     add_bttn.setAttribute("class","add-bttn-crousel");
     add_bttn.textContent = "Add";
     add_bttn.addEventListener("click",()=>{
         addtoLocal(medicine);
+        // location.reload;
+        // fetchingFromStorage();
     })
     medicine_card.append(img_div,title_div,strip_div,mrp,off_div,price_div,add_bttn);
 
@@ -170,35 +160,174 @@ let slider = document.getElementById("frequently-brougth-crousel");
 
     // addtoLocal(data);
 
+    // let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
     function addtoLocal(data){
-        // console.log(data);
-    
+        data.cart_m = 1;
+        medicine_storage.push(data);
+        localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
+        // location.reload;
+        showData();
+        function showData(){
+            let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+            let container = document.querySelector(".cart-items");
+
+            let item = medicine_storage[medicine_storage.length - 1];
+            let item_card = document.createElement("div");
+            item_card.setAttribute("class","item-card");
+            item_card.innerHTML = `
+            <div id="image" style="margin-left: 0px;"><img src="${item.img}" width="80px" height="50px" style="margin-top: 30px;" id="cart-image" alt=""></div>
+            <div id="medicine-info">
+                <div class="title-medicine-cart">${item.name}</div>
+                <div class="provider-medicine-cart">By USV PVT LTD</div>
+                <div class="strip-medicine-cart">14 Tablet(s) in Strip</div>
+                <select>
+                   <option value="" selected disabled hidden>Qty ${item.cart_m}</option>
+                    <option value ="1" name = "Qty 1">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>    
+                   </select>       
+                <div class="delevery-date">Delivery <span style="font-weight: 600;">9 Mar - 10 Mar</span> </div>
+                
+            </div>
+            <div id="price-action">
+                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
+                <div class="price">
+                   <span style="font-size: 13px; font-weight: 500;  color: rgb(230, 66, 66);">18% OFF <span style="text-decoration: line-through; color: rgb(79, 88, 94);" class="price-mrp">₹ ${item.mrp} </span> </span> <br>
+                    <span style="font-size: 18px; font-weight: bold; color: rgb(79, 88, 94);" class="price-price">₹ ${item.price}*</span>
+                </div>
+            </div>
+            `
+
+            container.append(item_card);
+
+            let delete_buttons = document.querySelectorAll(".delete-button");
+            for(let i = 0 ; i< delete_buttons.length; i++){
+                let button = delete_buttons[i];
+                button.style.cursor = "pointer";
+                let ele = i + 1;
+                button.addEventListener("click",(e)=>{
+                    localStorageRemove(ele - 1);
+                    location.reload();
+                })
+            }
+
+            let cart_count = document.querySelector(".cart-count-original");
+        let sum_price = 0;
+        let sum_items = 0;
+        medicine_storage.forEach((data)=>{
+            sum_price += data.price * data.cart_m;
+            sum_items += parseInt(data.cart_m);
+            
+        })
+        // console.log(sum_items);
+        
+        cart_count.textContent = sum_items +" Item(s) in Cart";
+        
+        let cart_price = document.getElementById("cart-price");
+        cart_price.textContent = "₹ "+(sum_price);
+        let total_price = document.getElementById("total-price");
+        total_price.textContent =  "₹ "+ (sum_price);
+
+        } 
     }
 
 
 
-    var details = JSON.parse(localStorage.getItem("name_arr"));
-
-    fetchingFromStorage();
+    fetchingFromStorage();  
     function fetchingFromStorage(){
 
         let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+        
+        
 
+        let container = document.querySelector(".cart-items");
+        medicine_storage.forEach((item)=>{
+            // let cart_count = item.car_m;
+            // console.log(cart_count);
+            let item_card = document.createElement("div");
+            item_card.setAttribute("class","item-card");
+            item_card.innerHTML = `
+            <div id="image" style="margin-left: 0px;"><img src="${item.img}" width="80px" height="50px" style="margin-top: 30px;" id="cart-image" alt=""></div>
+            <div id="medicine-info">
+                <div class="title-medicine-cart">${item.name}</div>
+                <div class="provider-medicine-cart">By USV PVT LTD</div>
+                <div class="strip-medicine-cart">14 Tablet(s) in Strip</div>
+                <select>
+                   <option value="" selected disabled hidden>Qty ${item.cart_m}</option>
+                    <option value ="1" name = "Qty 1">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>    
+                   </select>       
+                <div class="delevery-date">Delivery <span style="font-weight: 600;">9 Mar - 10 Mar</span> </div>
+                
+            </div>
+            <div id="price-action">
+                <div class="delete-img"><span><img src="../Images/AddtoCart Page/Ecosprin/rx.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span><span><img class="delete-button" src="../Images/AddtoCart Page/Ecosprin/delete.svg" style="width: 25px; height: 13%; padding: 0;" alt=""></span></div>
+                <div class="price">
+                   <span style="font-size: 13px; font-weight: 500;  color: rgb(230, 66, 66);">18% OFF <span style="text-decoration: line-through; color: rgb(79, 88, 94);" class="price-mrp">₹ ${item.mrp} </span> </span> <br>
+                    <span style="font-size: 18px; font-weight: bold; color: rgb(79, 88, 94);" class="price-price">₹ ${item.price}*</span>
+                </div>
+            </div>
+            `
 
-        let image = document.getElementById("image");
-        image.src = "";
-        image.src = "https://media.istockphoto.com/photos/packet-of-generic-paracetamol-tablets-picture-id1022216070?s=612x612"
-
-        let   title = document.querySelector(".title-medicine-cart");
-        title.textContent = details[0].name; 
-
-        let mrp = document.querySelector(".price-mrp");
-        mrp.textContent = details[0].MRP;
-        let price = document.querySelector(".price-price");
-        price.textContent = details[0].price;
-
+            container.append(item_card);
+        });
         
     }
 
+    let delete_buttons = document.querySelectorAll(".delete-button");
+    for(let i = 0 ; i< delete_buttons.length; i++){
+        let button = delete_buttons[i];
+        button.style.cursor = "pointer";
 
-    console.log(details[0].img1);
+        let ele = i+1;
+        button.addEventListener("click",(e)=>{
+            localStorageRemove(ele);
+            location.reload();
+        })
+    }
+
+   function localStorageRemove(ele){
+        let medicine_storage = JSON.parse(localStorage.getItem("medicine_storage"));
+        console.log(medicine_storage);
+
+        medicine_storage = medicine_storage.slice(0,ele).concat(medicine_storage.slice(ele+1,medicine_storage.length));
+        localStorage.setItem("medicine_storage",JSON.stringify(medicine_storage));
+        fetchingFromStorage();
+
+    }
+    // console.log(delete_buttons);
+
+
+    // let sum_items;
+    let cart_count = document.querySelector(".cart-count-original");
+        let sum_price = 0;
+        let sum_items = 0;
+        medicine_storage.forEach((data)=>{
+            sum_price += data.price * data.cart_m;
+            sum_items += parseInt(data.cart_m);
+            
+        })
+        // console.log(sum_items);
+        
+        cart_count.textContent = sum_items +" Item(s) in Cart";
+        
+        let cart_price = document.getElementById("cart-price");
+        cart_price.textContent = "₹ "+(sum_price);
+        let total_price = document.getElementById("total-price");
+        total_price.textContent =  "₹ "+ (sum_price);
+
+
+    
+
+
+
+
