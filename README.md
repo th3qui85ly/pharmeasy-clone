@@ -2,6 +2,7 @@
 Pharmeasy.in is an e-commerce platform providing services in Online medicine, Diagnostics and Online Doctor Consultation.
 
 A four membered team was involved in the completion of project in 6 days.
+![Pharmeasy](https://user-images.githubusercontent.com/17404232/163176372-66251889-6e0f-451e-bce3-cfc288ef886a.jpg)
 
 ### 🛠️ Tech used :
 <div>
